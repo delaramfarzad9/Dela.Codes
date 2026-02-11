@@ -29,7 +29,7 @@ export default function Herosection({ children, theme }) {
 </div>
      
     </section>
- <ParticlesComponent id="particles" theme={theme} className="absolute inset-0 -z-10 pointer-events-none"/>
+ 
     </>
     
   );

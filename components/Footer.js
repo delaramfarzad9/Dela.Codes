@@ -3,7 +3,7 @@ import FooterMedia from './FooterMedia'
 import FooterContact from './FooterContact'
 import CopyRight from './CopyRight'
 
-export default function Footer() {
+export default function Footer({theme}) {
   return (
    <footer className='relative z-10 w-full border-t-2 border-black/10 dark:border-white/10 '>
     <div className='md:px-20 pt-3 flex flex-col gap-6 justify-center md:flex-row  items-center md:justify-between '>
