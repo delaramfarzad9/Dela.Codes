@@ -3,7 +3,7 @@ const projects= [
     {
       title: "Task Manager App",
       img: "/images/projects/taskmanager.png",
-      description: "A simple and stylish responsive task manager built with React, Vite, and Tailwind CSS. Users can add, edit, complete, delete, and mark tasks as important. Includes task sorting, a clean UI, and a dark/light mode toggle for an improved user experience.",
+      description: "A clean and responsive task manager built with React, Vite, and Tailwind CSS. It lets users add, edit, complete, delete, and mark tasks as important, with smart sorting and a smooth, minimal UI. The app includes a polished dark/light mode and saves all data locally for a seamless, persistent experience.",
       tech: ["React", "Tailwind CSS", "LocalStorage","JavaScript (ES6+)"],
       demo: "https://delaramfarzad9.github.io/react-task-manager/",
       github: "https://github.com/yourusername/task-manager",

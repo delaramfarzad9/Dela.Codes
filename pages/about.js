@@ -1,36 +1,42 @@
 import Tech from "@/components/Tech";
-import SkillBtn from "@/components/SkillBtn";
 import { skills, learning, design, tools } from "@/data/skills";
+import SkillSection from "@/components/SkillSection";
 export default function About({ theme }) {
   
 
   return (
     <>
-      <section id="about" className="min-h-screen relative z-10 mx-20 ">
+      <section id="about" className="min-h-screen relative z-10 md:mx-20 mx-6  my-20 lg:my-0 ">
         <div className="flex flex-col justify-center items-center mb-20">
-          {/* pic & about row  */}
-<div className="flex flex-row  justify-center items-center lg:gap-48 dark:bg-[#1F2937] bg-[#E5E7EB] lg:mt-20 lg:mb-20">
+          {/* pic & paragraphs  */}
+<div className="flex lg:flex-row flex-col  justify-center lg:items-start   xl:items-center items-center lg:gap-48 dark:bg-[#1F2937] bg-[#E5E7EB] lg:mt-20 lg:mb-20">
           {/* pic */}
           <img
             src="/images/about/about3.png"
             alt="Dela profile"
-            className="h-96 w-96 rounded-full object-cover shadow-lg lg:mt-20 "
+            className="xl:h-96 xl:w-96 h-80 w-80 rounded-full object-cover shadow-lg lg:mt-20 "
           />
           {/* text column */}
           <div className="flex flex-col justify-center items-center">
             <div className="flex flex-row justify-between items-end w-full">
               {/* title */}
-              <h1 className=" text-4xl font-black text-center mb-10 ">
+              {/*title lg  */}
+              <h1 className="hidden lg:block text-3xl xl:text-4xl font-black text-center mb-10 " data-aos="fade-down" data-aos-duration="1500">
                 About Me
               </h1>
+              {/*title up to lg  */}
+              <h1 className="lg:hidden text-3xl xl:text-4xl font-black text-center mb-10 " data-aos="fade-right" data-aos-duration="1500">
+                About Me
+              </h1>
+
               {/* CTA */}
-              <div className="flex justify-center items-center m-10 ">
+              <div data-aos="fade-left" data-aos-duration="1500" className="flex justify-center items-center m-10 ">
                 <a
                   href="/DelaramFarzadResume (2).pdf"
                   download
                   className="
       relative inline-flex items-center justify-center
-      px-8 py-3 overflow-hidden font-medium tracking-wide
+      px-8 py-3 lg:px-6 xl:px-8 overflow-hidden font-medium tracking-wide
       text-white bg-sky-400 hover:bg-sky-500
       rounded-lg shadow-lg transition duration-300 ease-out
       hover:shadow-xl group
@@ -48,8 +54,8 @@ export default function About({ theme }) {
                 </a>
               </div>
             </div>
-{/* paragraphs */}
-            <div className="flex flex-col gap-2 text-xl">
+                               {/* paragraphs */}
+            <div data-aos="fade-right" data-aos-duration="1500" className="flex flex-col gap-2 w-full md:text-xl">
               <p>
                 I’m Dela, a Front‑End Developer with a strong focus on creating
                 clean, responsive, and user‑friendly interfaces. I work with{" "}
@@ -84,43 +90,15 @@ export default function About({ theme }) {
           </div>
         </div>
          {/* Skills Section */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:gap-x-40 max-w-7xl mx-auto ">
+<div className="grid grid-cols-1 gap-x-20 md:grid-cols-2 lg:gap-x-40 max-w-7xl mx-auto ">
               {/* core front end  */}
-<div className="mt-12 w-full">
-  <h2 className="text-2xl font-bold mb-6 text-center lg:text-left">
-    Core Frontend Skills
-  </h2>
-  <div className="flex flex-row flex-wrap gap-4">
-{skills.map((skill,index)=><SkillBtn key={index} skill={skill}/>)}
-  </div>
-</div>
+  <SkillSection title="Core Frontend Skills" items={skills} variant="default" aos="fade-right" />
 {/* learning  */}
-<div className="mt-12 w-full">
-  <h2 className="text-2xl font-bold mb-6 text-center lg:text-left">
-    Learning
-  </h2>
-  <div className="flex flex-row flex-wrap gap-4">
-{learning.map((skill,index)=><SkillBtn key={index} skill={skill} variant="learning"  />)}
-  </div>
-</div>
+  <SkillSection title="Learning" items={learning} variant="learning" aos="fade-left" />
 {/* design  */}
-<div className="mt-12 w-full">
-  <h2 className="text-2xl font-bold mb-6 text-center lg:text-left">
-    Design
-  </h2>
-  <div className="flex flex-row flex-wrap gap-4">
-{design.map((skill,index)=><SkillBtn key={index} skill={skill} variant="design"/>)}
-  </div>
-</div>
+ <SkillSection title="Design" items={design} variant="design" aos="fade-right" />
 {/* tools  */}
-<div className="mt-12 w-full">
-  <h2 className="text-2xl font-bold mb-6 text-center lg:text-left">
-    Tools
-  </h2>
-  <div className="flex flex-row flex-wrap gap-4">
-{tools.map((skill,index)=><SkillBtn key={index} skill={skill} variant="tools" className="bg-pink-600!"/>)}
-  </div>
-</div>
+  <SkillSection title="Tools" items={tools} variant="tools" aos="fade-left" />
 </div>
 
 

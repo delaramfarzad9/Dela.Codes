@@ -5,7 +5,9 @@ import { useRouter } from "next/router";
 
 
 export default function Navbar({theme,onThemeChange }) {
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const router = useRouter();
 
   useEffect(() => {
@@ -14,7 +16,16 @@ export default function Navbar({theme,onThemeChange }) {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, []);
+useEffect(() => {
+  const handleRouteChange = () => setMenuOpen(false);
+  router.events.on("routeChangeStart", handleRouteChange);
+
+  return () => {
+    router.events.off("routeChangeStart", handleRouteChange);
+  };
+}, [router]);
+
 
  const isActive = (href) => router.pathname === href;
   return (
@@ -43,7 +54,16 @@ export default function Navbar({theme,onThemeChange }) {
       </nav>
 
       {/* Mobile Menu Button */}
-      <button className="sm:hidden text-2xl">☰</button>
+      <button onClick={() => setMenuOpen(!menuOpen)} className="sm:hidden text-2xl">{menuOpen ? "✕" : "☰"}</button>
+      {menuOpen && (
+  <div className="sm:hidden absolute top-16 left-0 w-full bg-gray-100 dark:bg-gray-800 shadow-lg py-6 flex flex-col items-center gap-6 text-xl z-40">
+    <NavLink href="/" active={isActive("/")} onClick={() => setMenuOpen(false)}>Home</NavLink>
+    <NavLink href="/about" active={isActive("/about")} onClick={() => setMenuOpen(false)}>About</NavLink>
+    <NavLink href="/projects" active={isActive("/projects")} onClick={() => setMenuOpen(false)}>Projects</NavLink>
+    <NavLink href="/contact" active={isActive("/contact")} onClick={() => setMenuOpen(false)}>Contact</NavLink>
+  </div>
+)}
+
     </div>
   )
 }
