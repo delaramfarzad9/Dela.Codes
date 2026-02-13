@@ -5,9 +5,13 @@ import { useState, useEffect } from "react";
 
 const Contact = ({ theme }) => {
   const [submittedQuery, setSubmittedQuery] = useState(null);
-   useEffect(() => { 
+  useEffect(() => {
+  if (typeof window !== "undefined") {
     const query = new URLSearchParams(window.location.search).get("submitted");
-     setSubmittedQuery(query); }, []);
+    setSubmittedQuery(query);
+  }
+}, []);
+
       const [showMessage, setShowMessage] = useState(false);
        useEffect(() => { 
         if (submittedQuery === "true") { 
@@ -22,14 +26,14 @@ const Contact = ({ theme }) => {
         <div  className="flex flex-col   mt-30 md:mt-0 text-mainTxt dark:text-mainTxt-dark lg:min-w-fit   ">
           {/* title & subtitle */}
           <div className="flex flex-col  gap-5">
-            <h1 data-aos="fade-down" data-aos-duration="1500" className="text-3xl xl:text-4xl font-black ">Let's work together</h1>
-            <p data-aos="fade-right" data-aos-duration="1500" className=" xl:text-lg ">
+            <h1  className="text-3xl xl:text-4xl font-black ">Let's work together</h1>
+            <p  className=" xl:text-lg ">
               Feel free to reach out for collaborations or opportunities.
             </p>
            
           </div>
           {/* links & location */}
-           <div data-aos="fade-right" data-aos-duration="1500" className="flex flex-col gap-4 mt-10">
+           <div className="flex flex-col gap-4 mt-10">
           {/* links  */}
              <div className="flex flex-row  gap-5">
                  <IconLink
@@ -55,7 +59,7 @@ const Contact = ({ theme }) => {
             </div>
         </div>
         {/* form side  */}
-        <div data-aos="fade-left" data-aos-duration="1500" className="text-mainTxt dark:text-mainTxt-dark w-full lg:min-w-md lg:w-full">
+        <div  className="text-mainTxt dark:text-mainTxt-dark w-full lg:min-w-md lg:w-full">
           <form
             action="https://formsubmit.co/delaramfarzad9@gmail.com"
             method="POST"
@@ -87,7 +91,8 @@ const Contact = ({ theme }) => {
             <input
               type="hidden"
               name="_next"
-              value="http://localhost:5174/?submitted=true"
+              value="http://localhost:3000/contact?submitted=true"
+
             />
 
            <div className="flex justify-center">

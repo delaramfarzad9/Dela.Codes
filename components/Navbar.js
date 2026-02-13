@@ -17,14 +17,13 @@ export default function Navbar({theme,onThemeChange }) {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, []);
-useEffect(() => {
-  const handleRouteChange = () => setMenuOpen(false);
-  router.events.on("routeChangeStart", handleRouteChange);
 
-  return () => {
-    router.events.off("routeChangeStart", handleRouteChange);
-  };
-}, [router]);
+useEffect(() => {
+  const close = () => setMenuOpen(false);
+  router.events.on("routeChangeStart", close);
+  return () => router.events.off("routeChangeStart", close);
+}, []);
+
 
 
  const isActive = (href) => router.pathname === href;

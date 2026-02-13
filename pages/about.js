@@ -1,6 +1,8 @@
 import Tech from "@/components/Tech";
 import { skills, learning, design, tools } from "@/data/skills";
 import SkillSection from "@/components/SkillSection";
+import { motion } from "framer-motion";
+
 export default function About({ theme }) {
   
 
@@ -21,16 +23,24 @@ export default function About({ theme }) {
             <div className="flex flex-row justify-between items-end w-full">
               {/* title */}
               {/*title lg  */}
-              <h1 className="hidden lg:block text-3xl xl:text-4xl font-black text-center mb-10 " data-aos="fade-down" data-aos-duration="1500">
-                About Me
-              </h1>
-              {/*title up to lg  */}
-              <h1 className="lg:hidden text-3xl xl:text-4xl font-black text-center mb-10 " data-aos="fade-right" data-aos-duration="1500">
-                About Me
-              </h1>
+             <motion.h1
+  initial={{ opacity: 0, y: -50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+  viewport={{ once: true }}
+  className="text-3xl xl:text-4xl font-black text-center mb-10"
+>
+  About Me
+</motion.h1>
 
+             
               {/* CTA */}
-              <div data-aos="fade-left" data-aos-duration="1500" className="flex justify-center items-center m-10 ">
+              <motion.div
+               initial={{ opacity: 0, x: 80 }}
+                whileInView={{ opacity: 1, x: 0 }} 
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                 viewport={{ once: true }}
+               className="flex justify-center items-center m-10 ">
                 <a
                   href="/DelaramFarzadResume (2).pdf"
                   download
@@ -52,10 +62,10 @@ export default function About({ theme }) {
                   ></span>
                   <span className="relative">Download CV</span>
                 </a>
-              </div>
+              </motion.div>
             </div>
                                {/* paragraphs */}
-            <div data-aos="fade-right" data-aos-duration="1500" className="flex flex-col gap-2 w-full md:text-xl">
+            <div className="flex flex-col gap-2 w-full md:text-xl">
               <p>
                 I’m Dela, a Front‑End Developer with a strong focus on creating
                 clean, responsive, and user‑friendly interfaces. I work with{" "}
@@ -92,13 +102,13 @@ export default function About({ theme }) {
          {/* Skills Section */}
 <div className="grid grid-cols-1 gap-x-20 md:grid-cols-2 lg:gap-x-40 max-w-7xl mx-auto ">
               {/* core front end  */}
-  <SkillSection title="Core Frontend Skills" items={skills} variant="default" aos="fade-right" />
+  <SkillSection title="Core Frontend Skills" items={skills} variant="default"/>
 {/* learning  */}
-  <SkillSection title="Learning" items={learning} variant="learning" aos="fade-left" />
+  <SkillSection title="Learning" items={learning} variant="learning"  />
 {/* design  */}
- <SkillSection title="Design" items={design} variant="design" aos="fade-right" />
+ <SkillSection title="Design" items={design} variant="design"  />
 {/* tools  */}
-  <SkillSection title="Tools" items={tools} variant="tools" aos="fade-left" />
+  <SkillSection title="Tools" items={tools} variant="tools"  />
 </div>
 
 

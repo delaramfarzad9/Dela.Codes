@@ -1,14 +1,14 @@
 
-
+import Image from "next/image"
 
 const ProjectsCard = ({project}) => {
   return (
     <div className='flex flex-row justify-center items-center  gap-10 mb-10'>
 
-    <img src={project.img} alt={project.title} className=' h-56'/>
-
+   
+<Image src={project.img} alt={project.title} width={400} height={224} className="h-56 object-cover" />
 {/* title/description/techs */}
-<div data-aos="fade-left" data-aos-duration="1500" className='flex flex-col gap-5 m-5'>
+<div  className='flex flex-col gap-5 m-5'>
 <div className='flex flex-row justify-between'>
     <h2 className='font-bold text-2xl'>{project.title}</h2>
 {/* demo & code  */}

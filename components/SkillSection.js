@@ -3,12 +3,11 @@ export default function SkillSection({
   title, 
   items, 
   variant, 
-  aos = "fade-right" 
+   
 }) {
   return (
     <div 
-      data-aos={aos} 
-      data-aos-duration="1500" 
+      
       className="mt-12 w-full"
     >
       <h2 className="text-2xl font-bold mb-6 text-center lg:text-left">
@@ -16,9 +15,9 @@ export default function SkillSection({
       </h2>
 
       <div className="flex flex-row flex-wrap gap-4 justify-center items-center xl:justify-start">
-        {items.map((skill, index) => (
+        {items.map((skill) => (
           <SkillBtn 
-            key={index} 
+            key={skill} 
             skill={skill} 
             variant={variant} 
           />
