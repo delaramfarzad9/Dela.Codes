@@ -2,16 +2,55 @@ import Tech from "@/components/Tech";
 import { skills, learning, design, tools } from "@/data/skills";
 import SkillSection from "@/components/SkillSection";
 import { motion } from "framer-motion";
+import { useEffect,useState } from "react";
+import React from "react";
+
 
 export default function About({ theme }) {
-  
+  const [isLargeScreen, setIsLargeScreen] = useState(
+  typeof window !== "undefined" ? window.innerWidth >= 1024 : false
+);
+
+React.useEffect(() => {
+  const checkSize = () => setIsLargeScreen(window.innerWidth >= 1024);
+  checkSize();
+  window.addEventListener("resize", checkSize);
+  return () => window.removeEventListener("resize", checkSize);
+}, []);
+
+const fadeLeft = {
+  hidden: { opacity: 0, x: -60 },
+  visible: { 
+    opacity: 1, 
+    x: 0,
+    transition: { duration: 1.0, ease: "easeOut" }  // slower + smoother
+  }
+};
+
+const fadeRight = {
+  hidden: { opacity: 0, x: 60 },
+  visible: { 
+    opacity: 1, 
+    x: 0,
+    transition: { duration: 1.0, ease: "easeOut" }  // slower + smoother
+  }
+};
+
+
+
+
 
   return (
     <>
       <section id="about" className="min-h-screen relative z-10 md:mx-20 mx-6  my-20 lg:my-0 ">
         <div className="flex flex-col justify-center items-center mb-20">
           {/* pic & paragraphs  */}
-<div className="flex lg:flex-row flex-col  justify-center lg:items-start   xl:items-center items-center lg:gap-48 dark:bg-[#1F2937] bg-[#E5E7EB] lg:mt-20 lg:mb-20">
+<div className=" flex flex-col lg:flex-row 
+  justify-center 
+  items-center lg:items-center xl:items-center
+  gap-10 lg:gap-20 xl:gap-48
+  dark:bg-[#1F2937] bg-[#E5E7EB]
+  lg:mt-20 lg:mb-20">
           {/* pic */}
           <img
             src="/images/about/about3.png"
@@ -22,12 +61,12 @@ export default function About({ theme }) {
           <div className="flex flex-col justify-center items-center">
             <div className="flex flex-row justify-between items-end w-full">
               {/* title */}
-              {/*title lg  */}
+             
              <motion.h1
-  initial={{ opacity: 0, y: -50 }}
-  whileInView={{ opacity: 1, y: 0 }}
+ initial={{ opacity: 0, x: isLargeScreen ? 0 : -50,  y: isLargeScreen ? -50 : 0,  }}
+  whileInView={{ opacity: 1, x: 0, y: 0 }} 
   transition={{ duration: 0.8, ease: "easeOut" }}
-  viewport={{ once: true }}
+   viewport={{ once: true }}
   className="text-3xl xl:text-4xl font-black text-center mb-10"
 >
   About Me
@@ -65,8 +104,18 @@ export default function About({ theme }) {
               </motion.div>
             </div>
                                {/* paragraphs */}
-            <div className="flex flex-col gap-2 w-full md:text-xl">
-              <p>
+            <motion.div className="flex flex-col gap-2 w-full md:text-xl"
+            initial="hidden"
+             whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+               variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.2, 
+
+             }, }, }}>
+              <motion.p
+              variants={{ hidden: { opacity: 0, y: 20 }, 
+              visible: { opacity: 1, y: 0 }, }} 
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              >
                 I’m Dela, a Front‑End Developer with a strong focus on creating
                 clean, responsive, and user‑friendly interfaces. I work with{" "}
                 <Tech tech="HTML" />, <Tech tech="CSS" />,
@@ -75,41 +124,54 @@ export default function About({ theme }) {
                 in
                 <Tech tech="Next.js" /> and exploring <Tech tech="TypeScript" />
                 .
-              </p>
-              <p>
+              </motion.p>
+              <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 }, }} transition={{ duration: 0.5, ease: "easeOut" }}>
                 I’ve built several projects, including a personal website in
                 Next.js, a React admin dashboard, a task manager app, a
                 real‑time weather app using APIs, and multiple smaller web
                 applications.
-              </p>
-              <p>
-                With a background in architecture and <Tech tech="UI/UX" />{" "}
-                design, I bring a strong visual perspective and a deep
-                appreciation for structure, clarity, and user experience. I
-                enjoy combining design and development to create digital
-                experiences that feel intuitive and visually engaging.
-              </p>
-              <p>
-                I’m currently looking for opportunities to gain real‑world
-                experience, collaborate with a team, and continue growing my
-                React and Next.js skills
-              </p>
-            </div>
+              </motion.p>
+              <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 }, }} transition={{ duration: 0.5, ease: "easeOut" }}>
+                With a background in architecture and <Tech tech="UI/UX" /> design, I bring a strong visual perspective and a love for creating intuitive digital experiences. I’m looking for opportunities to grow, collaborate, and gain real‑world experience.
+              </motion.p>
+              <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 }, }} transition={{ duration: 0.5, ease: "easeOut" }}>
+                I speak <Tech tech="English" />, <Tech tech="German" />, and <Tech tech="Persian" />.
+              </motion.p>
+            </motion.div>
     
 
           </div>
         </div>
          {/* Skills Section */}
-<div className="grid grid-cols-1 gap-x-20 md:grid-cols-2 lg:gap-x-40 max-w-7xl mx-auto ">
+<motion.div 
+initial="hidden" 
+whileInView="visible"
+ viewport={{ once: true, amount: 0.2 }}
+  transition={{ staggerChildren: 0.45 }}
+className="grid grid-cols-1 gap-x-20 md:grid-cols-2 lg:gap-x-40 max-w-7xl mx-auto ">
               {/* core front end  */}
-  <SkillSection title="Core Frontend Skills" items={skills} variant="default"/>
+              <motion.div
+              variants={fadeLeft} 
+               
+                  transition={{ duration: 0.7, ease: "easeOut" }}
+              >
+<SkillSection title="Core Frontend Skills" items={skills} variant="default"/>
+              </motion.div>
+  
 {/* learning  */}
-  <SkillSection title="Learning" items={learning} variant="learning"  />
+  <motion.div variants={fadeRight} 
+              >
+    <SkillSection title="Learning" items={learning} variant="learning"  />
+  </motion.div>
 {/* design  */}
- <SkillSection title="Design" items={design} variant="design"  />
+ <motion.div variants={fadeLeft} 
+              >
+  <SkillSection title="Design" items={design} variant="design"  />
+ </motion.div>
 {/* tools  */}
-  <SkillSection title="Tools" items={tools} variant="tools"  />
-</div>
+  <motion.div variants={fadeRight} 
+              ><SkillSection title="Tools" items={tools} variant="tools"  /></motion.div>
+</motion.div>
 
 
         </div>

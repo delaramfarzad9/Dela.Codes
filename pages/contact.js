@@ -2,6 +2,7 @@
 import Svg from "../components/Svg";
 import IconLink from "../components/IconLink";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Contact = ({ theme }) => {
   const [submittedQuery, setSubmittedQuery] = useState(null);
@@ -19,23 +20,59 @@ const Contact = ({ theme }) => {
          } },
           [submittedQuery]
         );
+const titleVariants = {
+  hidden: { opacity: 0, y: -40 },
+  visible: { opacity: 1, y: 0 }
+};
+
+const leftVariants = {
+  hidden: { opacity: 0, x: -40 },
+  visible: { opacity: 1, x: 0 }
+};
+
+const rightVariants = {
+  hidden: { opacity: 0, x: 40 },
+  visible: { opacity: 1, x: 0 }
+};
+
   return (
-    <section id="contact" className="max-w-screen  md:h-screen flex justify-center items-center relative z-10 mx-6 md:mx-20 mb-10 md:mb-0  ">
-      <div className="flex flex-col  md:flex-row gap-10 md:20 xl:gap-48   ">
+    <motion.section 
+    initial="hidden" 
+    whileInView="visible"
+     viewport={{ once: true, amount: 0.2 }}
+      transition={{ staggerChildren: 0.2 }}
+    id="contact" className="max-w-screen  md:h-screen flex justify-center items-center relative z-10 mx-6 md:mx-20 mb-10 md:mb-0  ">
+      <motion.div
+      initial="hidden"
+       whileInView="visible" 
+       viewport={{ once: true, amount: 0.2 }} 
+       transition={{ staggerChildren: 0.2 }}
+       className="flex flex-col  md:flex-row gap-10 md:20 xl:gap-48   ">
         {/* title & links side  */}
-        <div  className="flex flex-col   mt-30 md:mt-0 text-mainTxt dark:text-mainTxt-dark lg:min-w-fit   ">
+        <div
+       
+          className="flex flex-col   mt-30 md:mt-0 text-mainTxt dark:text-mainTxt-dark lg:min-w-fit   ">
           {/* title & subtitle */}
           <div className="flex flex-col  gap-5">
-            <h1  className="text-3xl xl:text-4xl font-black ">Let's work together</h1>
-            <p  className=" xl:text-lg ">
+            <motion.h1 
+           variants={titleVariants} 
+           transition={{ duration: 0.7, ease: "easeOut" }}
+             className="text-3xl xl:text-4xl font-black ">Let's work together</motion.h1>
+            <motion.p 
+            variants={leftVariants}
+             transition={{ duration: 0.7, ease: "easeOut" }}
+             className=" xl:text-lg ">
               Feel free to reach out for collaborations or opportunities.
-            </p>
+            </motion.p>
            
           </div>
           {/* links & location */}
            <div className="flex flex-col gap-4 mt-10">
           {/* links  */}
-             <div className="flex flex-row  gap-5">
+             <motion.div
+              variants={leftVariants}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="flex flex-row  gap-5">
                  <IconLink
                 svgID="github"
                 href="https://github.com/delaramfarzad9"
@@ -47,19 +84,25 @@ const Contact = ({ theme }) => {
                 className="xl:w-20 xl:h-20  w-10 h-10 md:w-14 md:h-14"
               />
               <IconLink svgID="email" href="mailto:delaramfarzad9@gmail.com" className="xl:w-20 xl:h-20  w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16" />
-             </div>
+             </motion.div>
                  {/* location  */}
-             <div className="flex flex-row items-center gap-2 opacity-80">
+             <motion.div 
+             variants={leftVariants}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+             className="flex flex-row items-center gap-2 opacity-80">
               <Svg
                 svgId="location"
                 className="w-6 h-6 lg:w-8 lg:h-8 dark:text-white  "
               />
               <span className="">Leamington Spa, UK</span>
-            </div>
+            </motion.div>
             </div>
         </div>
         {/* form side  */}
-        <div  className="text-mainTxt dark:text-mainTxt-dark w-full lg:min-w-md lg:w-full">
+        <motion.div
+        variants={rightVariants}
+         transition={{ duration: 0.7, ease: "easeOut" }}
+          className="text-mainTxt dark:text-mainTxt-dark w-full lg:min-w-md lg:w-full">
           <form
             action="https://formsubmit.co/delaramfarzad9@gmail.com"
             method="POST"
@@ -111,11 +154,11 @@ const Contact = ({ theme }) => {
               <p className="text-green-500 mt-2">Message sent successfully!</p>
             )}
           </form>
-        </div>
+        </motion.div>
 
         {/* form side finishes */}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 
