@@ -4,7 +4,8 @@ import SkillSection from "@/components/SkillSection";
 import { motion } from "framer-motion";
 import { useEffect,useState } from "react";
 import React from "react";
-
+import Image from "next/image";
+    
 
 export default function About({ theme }) {
   const [isLargeScreen, setIsLargeScreen] = useState(
@@ -42,8 +43,8 @@ const fadeRight = {
 
   return (
     <>
-      <section id="about" className="min-h-screen relative z-10 md:mx-20 mx-6  my-20 lg:my-0 ">
-        <div className="flex flex-col justify-center items-center mb-20">
+      <section id="about" className="min-h-screen relative z-10 md:mx-20 mx-6  mt-20 mb-20 lg:mt-0 ">
+        <div className="flex flex-col justify-center items-center ">
           {/* pic & paragraphs  */}
 <div className=" flex flex-col lg:flex-row 
   justify-center 
@@ -52,13 +53,24 @@ const fadeRight = {
   dark:bg-[#1F2937] bg-[#E5E7EB]
   lg:mt-20 lg:mb-20">
           {/* pic */}
-          <img
-            src="/images/about/about3.png"
-            alt="Dela profile"
-            className="xl:h-96 xl:w-96 h-80 w-80 rounded-full object-cover shadow-lg lg:mt-20 "
-          />
+        <Image
+  src="/images/about/about3.png"
+  alt="Dela profile"
+  width={400}
+  height={400}
+  priority
+  className="
+    rounded-full object-cover shadow-lg
+    h-80 w-80
+    md:h-72 md:w-72
+    lg:h-80 lg:w-80
+    xl:h-96 xl:w-96  xl:mt-14
+   
+  "
+/>
+
           {/* text column */}
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center ">
             <div className="flex flex-row justify-between items-end w-full">
               {/* title */}
              
@@ -99,7 +111,7 @@ const fadeRight = {
         transition-transform duration-500 ease-out
       "
                   ></span>
-                  <span className="relative">Download CV</span>
+                  <span className="relative font-semibold">Download CV</span>
                 </a>
               </motion.div>
             </div>
