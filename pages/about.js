@@ -86,7 +86,7 @@ const fadeRight = {
                 whileInView={{ opacity: 1, x: 0 }} 
                 transition={{ duration: 0.8, ease: "easeOut" }}
                  viewport={{ once: true }}
-               className="flex justify-center items-center m-10 ">
+               className="flex justify-center items-center my-10 md:mx-10 mx-2">
                 <a
                   href="/DelaramFarzadResume (2).pdf"
                   download
