@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Projects = ({ theme }) => {
   return (
     <section id='projects' className='min-h-screen max-w-7xl mx-auto
- relative z-10 lg:mx-20  mt-20 lg:mt-30 lg:mb-20'>
+ relative z-10 lg:mx-20  mt-20 lg:mt-30 lg:mb-20 landscape-projects'>
 <div className='flex flex-col dark:bg-[#1F2937] bg-[#E5E7EB] px-5 md:px-10'>
 <motion.h1 
 initial={{ opacity: 0, y: -40 }}

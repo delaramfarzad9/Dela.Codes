@@ -154,6 +154,21 @@ body{
     padding-bottom: 2rem !important;
   }
 }
+@media (orientation: landscape) and (max-height: 500px) {
+  .landscape-hero {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .landscape-hero-graphic {
+    margin-left: 0 !important;
+    transform: scale(0.85);
+  }
+}
+
 html, body {
   overflow-x: hidden;
   background-color: #E5E7EB; /* or your light theme background */
@@ -161,4 +176,9 @@ html, body {
 
 .dark body {
   background-color: #1F2937; /* your dark theme background */
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .landscape-projects {
+    margin-top: 4rem !important;
+  }
 }
