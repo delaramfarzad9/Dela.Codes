@@ -141,3 +141,10 @@ body{
   visibility: visible;
   transition: opacity 0.7s ease;
 }
+@media (orientation: landscape) and (max-height: 500px) {
+  .navbar-compact {
+    height: 48px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
+}
