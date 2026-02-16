@@ -43,12 +43,12 @@ const fadeRight = {
 
   return (
     <>
-      <section id="about" className="min-h-screen relative z-10 md:mx-20 mx-6  mt-20 mb-20 lg:mt-0 ">
+      <section id="about" className="min-h-screen max-w-screen relative z-10 md:mx-20 mx-6  mt-20 mb-20 lg:mt-0 ">
         <div className="flex flex-col justify-center items-center ">
           {/* pic & paragraphs  */}
 <div className=" flex flex-col lg:flex-row 
   justify-center 
-  items-center lg:items-center xl:items-center
+  items-center 
   gap-10 lg:gap-20 xl:gap-48
   dark:bg-[#1F2937] bg-[#E5E7EB]
   lg:mt-20 lg:mb-20">
@@ -71,7 +71,7 @@ const fadeRight = {
 
           {/* text column */}
           <div className="flex flex-col justify-center items-center ">
-            <div className="flex flex-row justify-between items-end w-full">
+            <div className="flex flex-row justify-between items-end w-full gap-5">
               {/* title */}
              
              <motion.h1
