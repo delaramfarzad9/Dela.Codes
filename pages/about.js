@@ -45,7 +45,7 @@ const fadeRight = {
   items-center 
   gap-10 lg:gap-20 xl:gap-48
   dark:bg-[#1F2937] bg-[#E5E7EB]
-  lg:mt-20 lg:mb-20 overflow-hidden
+  lg:mt-20 lg:mb-20 overflow-hidden px-6 md:px-10
 ">
           {/* pic */}
         <Image
