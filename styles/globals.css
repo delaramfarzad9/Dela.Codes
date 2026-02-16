@@ -164,7 +164,7 @@ body{
   }
 
   .landscape-hero-graphic {
-    margin-left: 0 !important;
+    margin-right: 0 !important;
     transform: scale(0.85);
   }
 }
@@ -179,6 +179,6 @@ html, body {
 }
 @media (orientation: landscape) and (max-height: 500px) {
   .landscape-projects {
-    margin-top: 4rem !important;
+    margin-top: 2rem !important;
   }
 }

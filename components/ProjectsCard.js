@@ -27,7 +27,9 @@ const fadeRight = {
 };
 
   return (
-    <div className='flex lg:flex-row flex-col-reverse justify-center items-center  gap-10 lg:gap-20 mb-10 px-4 md:px-6'>
+    <motion.div
+    initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.01 }} transition={{ duration: 0.6, ease: "easeOut" }}
+     className='flex lg:flex-row flex-col-reverse justify-center items-center  gap-10 lg:gap-20 mb-10 px-4 md:px-6'>
 <motion.div
 variants={fadeLeft}
 >
@@ -60,7 +62,7 @@ variants={fadeRight}
 
 </motion.div>
 
-</div>
+</motion.div>
     
   )
 }
