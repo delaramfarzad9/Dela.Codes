@@ -1,6 +1,4 @@
-@import "tailwindcss";
-@custom-variant dark (&:where(.dark, .dark *));
- 
+
   /* League Spartan Font Faces */
   @font-face {
     font-family: "LeagueSpartan";
@@ -93,7 +91,9 @@
   font-weight: 400;
   src: url('/fonts/architects-daughter-v20-latin-regular.woff2') format('woff2'); 
 }
-
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+ 
 @theme{
   --font-spartan:LeagueSpartan,"sans-serif";
    --font-pacifico:Pacifico ,"sans-serif"; 
