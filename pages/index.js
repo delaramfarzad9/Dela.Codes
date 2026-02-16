@@ -14,7 +14,7 @@ export default function Herosection({ children, theme }) {
     
   return (
     <>
-    <section className="relative  z-10  md:h-screen max-w-screen flex flex-col  sm:pt-20 lg:pt-0">
+    <section className="relative  z-10  md:h-screen max-w-screen flex flex-col  sm:py-40 lg:py-0">
    
  
       {children}
