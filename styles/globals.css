@@ -148,3 +148,9 @@ body{
     padding-bottom: 4px !important;
   }
 }
+@media (orientation: landscape) and (max-height: 500px) {
+  .landscape-padding {
+    padding-top: 5rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
