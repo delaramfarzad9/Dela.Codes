@@ -20,21 +20,14 @@ React.useEffect(() => {
 }, []);
 
 const fadeLeft = {
-  hidden: { opacity: 0, x: -60 },
-  visible: { 
-    opacity: 1, 
-    x: 0,
-    transition: { duration: 1.0, ease: "easeOut" }  // slower + smoother
-  }
+  hidden: { opacity: 0, x: isLargeScreen ? -60 : -20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1.0, ease: "easeOut" } }
 };
 
+
 const fadeRight = {
-  hidden: { opacity: 0, x: 60 },
-  visible: { 
-    opacity: 1, 
-    x: 0,
-    transition: { duration: 1.0, ease: "easeOut" }  // slower + smoother
-  }
+  hidden: { opacity: 0, x: isLargeScreen ? 60 : 20 },
+  visible: { opacity: 1, x: 0, transition: { duration: 1.0, ease: "easeOut" } }
 };
 
 
@@ -43,7 +36,8 @@ const fadeRight = {
 
   return (
     <>
-      <section id="about" className="min-h-screen max-w-screen relative z-10 md:mx-20 mx-6  mt-20 mb-20 lg:mt-0 ">
+      <section id="about" className="min-h-screen max-w-7xl mx-auto
+ relative z-10 md:mx-20  mt-20 mb-20 lg:mt-0 ">
         <div className="flex flex-col justify-center items-center ">
           {/* pic & paragraphs  */}
 <div className=" flex flex-col lg:flex-row 
@@ -51,7 +45,8 @@ const fadeRight = {
   items-center 
   gap-10 lg:gap-20 xl:gap-48
   dark:bg-[#1F2937] bg-[#E5E7EB]
-  lg:mt-20 lg:mb-20">
+  lg:mt-20 lg:mb-20 overflow-hidden
+">
           {/* pic */}
         <Image
   src="/images/about/about3.png"
@@ -160,7 +155,8 @@ initial="hidden"
 whileInView="visible"
  viewport={{ once: true, amount: 0.2 }}
   transition={{ staggerChildren: 0.45 }}
-className="grid grid-cols-1 gap-x-20 md:grid-cols-2 lg:gap-x-40 max-w-7xl mx-auto ">
+className="grid grid-cols-1 gap-x-20 md:grid-cols-2 lg:gap-x-40 max-w-7xl mx-auto overflow-hidden
+">
               {/* core front end  */}
               <motion.div
               variants={fadeLeft} 
