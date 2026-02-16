@@ -131,3 +131,13 @@ body{
   position: absolute;
   inset: 0;
 }
+.page-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.page-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.7s ease;
+}

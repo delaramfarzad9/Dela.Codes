@@ -40,19 +40,22 @@ useEffect(() => {
   return (
     <>
      {loading && <Loader />}
-      <SvgSprite />
+  
+    <div  className={loading ? "page-hidden" : "page-visible"}>
+          <SvgSprite />
       <ParticlesComponent
         id="particles"
         theme={theme}
         className="absolute inset-0 -z-10 pointer-events-none"
       />
-      <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen">
         <Navbar theme={theme} onThemeChange={changeTheme} />
         <main>
           <Component {...pageProps} theme={theme} />
         </main>
         <Footer theme={theme} />
       </div>
+    </div>
     </>
   );
 }
