@@ -154,3 +154,11 @@ body{
     padding-bottom: 2rem !important;
   }
 }
+html, body {
+  overflow-x: hidden;
+  background-color: #E5E7EB; /* or your light theme background */
+}
+
+.dark body {
+  background-color: #1F2937; /* your dark theme background */
+}

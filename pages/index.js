@@ -14,13 +14,14 @@ export default function Herosection({ children, theme }) {
     
   return (
     <>
-    <section className="relative  z-10 min-h-screen  max-w-screen flex flex-col sm:justify-center landscape-padding 
+    <section className="relative  z-10 min-h-screen  w-full
+ flex flex-col sm:justify-center landscape-padding 
 ">
    
  
       {children}
       {/* wrapper */}
-      <div className="flex md:flex-row flex-col-reverse  max-w-screen h-full  mx-6 md:mx-20  md:justify-between md:items-center justify-end mt-24 md:mt-0 md:mb-0 mb-10">
+      <div className="flex md:flex-row flex-col-reverse  max-w-screen   mx-6 md:mx-20  md:justify-between md:items-center justify-end mt-24 md:mt-0 md:mb-0 mb-10">
        
        
         <HeroText name="Dela" title1="Front-End Developer" title2="UI Designer"/>
