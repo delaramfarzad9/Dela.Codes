@@ -165,7 +165,7 @@ body{
 
   .landscape-hero-graphic {
     margin-right: 0 !important;
-    padding-left: 2rem !important;
+    
     transform: scale(0.85);
   }
 }
