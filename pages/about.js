@@ -74,7 +74,7 @@ const fadeRight = {
   whileInView={{ opacity: 1, x: 0, y: 0 }} 
   transition={{ duration: 0.8, ease: "easeOut" }}
    viewport={{ once: true }}
-  className="text-2xl md:text-3xl xl:text-4xl font-black text-center mb-10"
+  className="text-2xl md:text-3xl xl:text-4xl font-black text-center mb-10 py-1"
 >
   About Me
 </motion.h1>
@@ -111,7 +111,7 @@ const fadeRight = {
               </motion.div>
             </div>
                                {/* paragraphs */}
-            <motion.div className="flex flex-col gap-2 w-full md:text-xl"
+            <motion.div className="flex flex-col gap-2 w-full md:text-xl px-2 md:px-0"
             initial="hidden"
              whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
@@ -155,7 +155,7 @@ initial="hidden"
 whileInView="visible"
  viewport={{ once: true, amount: 0.2 }}
   transition={{ staggerChildren: 0.45 }}
-className="grid grid-cols-1 gap-x-20 md:grid-cols-2 lg:gap-x-40 max-w-7xl mx-auto overflow-hidden
+className="grid grid-cols-1 gap-x-20 md:grid-cols-2 lg:gap-x-40 max-w-7xl mx-auto overflow-hidden px-6
 ">
               {/* core front end  */}
               <motion.div

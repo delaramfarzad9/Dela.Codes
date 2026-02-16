@@ -20,18 +20,19 @@ const Contact = ({ theme }) => {
          } },
           [submittedQuery]
         );
+        const [isLargeScreen, setIsLargeScreen] = useState( typeof window !== "undefined" ? window.innerWidth >= 1024 : false ); useEffect(() => { const checkSize = () => setIsLargeScreen(window.innerWidth >= 1024); checkSize(); window.addEventListener("resize", checkSize); return () => window.removeEventListener("resize", checkSize); }, []);
 const titleVariants = {
-  hidden: { opacity: 0, y: -40 },
+  hidden: { opacity: 0, y: isLargeScreen ? -40 : -20 },
   visible: { opacity: 1, y: 0 }
 };
 
 const leftVariants = {
-  hidden: { opacity: 0, x: -40 },
+  hidden: { opacity: 0, x: isLargeScreen ? -40 : -20 },
   visible: { opacity: 1, x: 0 }
 };
 
 const rightVariants = {
-  hidden: { opacity: 0, x: 40 },
+  hidden: { opacity: 0, x: isLargeScreen ? 40 : 20 },
   visible: { opacity: 1, x: 0 }
 };
 
@@ -41,13 +42,13 @@ const rightVariants = {
     whileInView="visible"
      viewport={{ once: true, amount: 0.2 }}
       transition={{ staggerChildren: 0.2 }}
-    id="contact" className="max-w-screen  md:h-screen flex justify-center items-center relative z-10 mx-6 md:mx-20 mb-10 md:mb-0  ">
+    id="contact" className="max-w-7xl mx-auto  md:h-screen flex justify-center items-center relative z-10 md:mx-20 mb-10 md:mb-0  ">
       <motion.div
       initial="hidden"
        whileInView="visible" 
        viewport={{ once: true, amount: 0.2 }} 
        transition={{ staggerChildren: 0.2 }}
-       className="flex flex-col  md:flex-row gap-10 md:20 xl:gap-48   ">
+       className="flex flex-col  md:flex-row gap-10 md:20 xl:gap-48 px-6 md:px-10  ">
         {/* title & links side  */}
         <div
        
@@ -102,7 +103,7 @@ const rightVariants = {
         <motion.div
         variants={rightVariants}
          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="text-mainTxt dark:text-mainTxt-dark w-full lg:min-w-md lg:w-full">
+          className="text-mainTxt dark:text-mainTxt-dark w-full lg:min-w-md lg:w-full px-4 md:px-0">
           <form
             action="https://formsubmit.co/delaramfarzad9@gmail.com"
             method="POST"
