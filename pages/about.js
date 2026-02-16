@@ -79,7 +79,7 @@ const fadeRight = {
   whileInView={{ opacity: 1, x: 0, y: 0 }} 
   transition={{ duration: 0.8, ease: "easeOut" }}
    viewport={{ once: true }}
-  className="text-3xl xl:text-4xl font-black text-center mb-10"
+  className="text-2xl md:text-3xl xl:text-4xl font-black text-center mb-10"
 >
   About Me
 </motion.h1>
@@ -97,7 +97,7 @@ const fadeRight = {
                   download
                   className="
       relative inline-flex items-center justify-center
-      px-8 py-3 lg:px-6 xl:px-8 overflow-hidden font-medium tracking-wide
+       py-3 px-6 xl:px-8 overflow-hidden font-medium tracking-wide
       text-white bg-sky-400 hover:bg-sky-500
       rounded-lg shadow-lg transition duration-300 ease-out
       hover:shadow-xl group
