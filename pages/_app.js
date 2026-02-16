@@ -10,12 +10,17 @@ import Footer from "@/components/Footer";
 import SvgSprite from "@/components/SvgSprite";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
+import Loader from "@/components/Loader";
 
 
 export default function App({ Component, pageProps }) {
   const [theme, setTheme] = useState("dark");
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
-
+useEffect(() => {
+   const timer = setTimeout(() =>
+     { setLoading(false); }, 1200); 
+ return () => clearTimeout(timer); }, []);
 
 
 
@@ -34,6 +39,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+     {loading && <Loader />}
       <SvgSprite />
       <ParticlesComponent
         id="particles"
