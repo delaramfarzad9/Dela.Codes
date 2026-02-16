@@ -32,7 +32,7 @@ export default function Herosection({ children, theme }) {
       repeat: Infinity,
       ease: "easeInOut",
     }} className="z-30 -ml-10 md:ml-0 ">
-      <HeroGraphic className="md:animate-none animate-spin-pause-spin "/>
+      <HeroGraphic className=""/>
    </motion.div>
 
 </div>n

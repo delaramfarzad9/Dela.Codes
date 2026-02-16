@@ -11,7 +11,7 @@ const ProjectsCard = ({project}) => {
        visible: { opacity: 1, x: 0,
          transition: { duration: 0.8, ease: "easeOut" } } };
   return (
-    <div className='flex lg:flex-row flex-col-reverse justify-center items-center  gap-10 mb-10'>
+    <div className='flex lg:flex-row flex-col-reverse justify-center items-center  gap-10 lg:gap-20 mb-10'>
 <motion.div
 variants={fadeLeft}
 >

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import NavLink from './NavLink'
 import DarkLightToggle from './DarkLightToggle'
 import { useRouter } from "next/router";
+import { motion } from "framer-motion";
 
 
 export default function Navbar({theme,onThemeChange }) {
@@ -28,7 +29,11 @@ useEffect(() => {
 
  const isActive = (href) => router.pathname === href;
   return (
-    <div
+    <motion.div
+    key={router.pathname}
+    initial={{ opacity: 0, y: -20 }} 
+    animate={{ opacity: 1, y: 0 }}
+     transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 w-screen h-16 z-50 flex justify-between items-center px-4 sm:px-10 md:px-20 transition-colors duration-300
         ${scrolled ? "bg-gray-100/50 dark:bg-gray-800/50 backdrop-blur-md shadow-md" : "bg-transparent"}
         text-mainTxt dark:text-mainTxt-dark`}
@@ -54,15 +59,22 @@ useEffect(() => {
 
       {/* Mobile Menu Button */}
       <button onClick={() => setMenuOpen(!menuOpen)} className="sm:hidden text-2xl">{menuOpen ? "✕" : "☰"}</button>
-      {menuOpen && (
-  <div className="sm:hidden absolute top-16 left-0 w-full bg-gray-100 dark:bg-gray-800 shadow-lg py-6 flex flex-col items-center gap-6 text-xl z-40">
+ {menuOpen && (
+  <motion.div
+    initial={{ opacity: 0, y: -10 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -10 }}
+    transition={{ duration: 0.25, ease: "easeOut" }}
+    className="sm:hidden absolute top-16 left-0 w-full bg-gray-100 dark:bg-gray-800 shadow-lg py-6 flex flex-col items-center gap-6 text-xl z-40"
+  >
     <NavLink href="/" active={isActive("/")} onClick={() => setMenuOpen(false)}>Home</NavLink>
     <NavLink href="/about" active={isActive("/about")} onClick={() => setMenuOpen(false)}>About</NavLink>
     <NavLink href="/projects" active={isActive("/projects")} onClick={() => setMenuOpen(false)}>Projects</NavLink>
     <NavLink href="/contact" active={isActive("/contact")} onClick={() => setMenuOpen(false)}>Contact</NavLink>
-  </div>
+  </motion.div>
 )}
 
-    </div>
+
+    </motion.div>
   )
 }
