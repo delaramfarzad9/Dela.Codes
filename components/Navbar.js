@@ -34,7 +34,7 @@ useEffect(() => {
     initial={{ opacity: 0, y: -20 }} 
     animate={{ opacity: 1, y: 0 }}
      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`navbar-compact fixed top-0 w-screen h-12 sm:h-14 md:h-16 z-50 flex justify-between items-center px-4 sm:px-6 md:px-20 transition-colors duration-300
+      className={`navbar-compact fixed top-0 w-screen h-12 sm:h-14 md:h-16 z-50 flex justify-between items-center  px-4 sm:px-6 md:px-20 transition-colors duration-300
         ${scrolled ? "bg-gray-100/50 dark:bg-gray-800/50 backdrop-blur-md shadow-md" : "bg-transparent"}
         text-mainTxt dark:text-mainTxt-dark`}
     >
