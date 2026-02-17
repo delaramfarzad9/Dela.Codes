@@ -5,6 +5,7 @@ import HeroText from "../components/HeroText";
 import HeroGraphic from "../components/HeroGraphic";
 import AnimatedLine from "../components/AnimatedLine";
 import { motion } from "framer-motion";
+import GuidingButtons from "@/components/GuidingButtons";
 
 
 
@@ -38,6 +39,11 @@ export default function Herosection({ children, theme }) {
    </motion.div>
 
 </div>
+    <div className="flex flex-row gap-2 sm:gap-5 justify-start items-center ml-6 md:ml-20  pt-0 sm:pt-5 xl:mt-0">
+       <GuidingButtons task="About Me" page="about"/>
+       <GuidingButtons task="Projects" page="projects"/>
+     
+    </div>
      
     </section>
  
