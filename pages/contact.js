@@ -136,7 +136,7 @@ const rightVariants = {
             <input
               type="hidden"
               name="_next"
-              value="http://localhost:3000/contact?submitted=true"
+              value="https://next-personal-app-seven.vercel.app/contact?submitted=true"
 
             />
 
