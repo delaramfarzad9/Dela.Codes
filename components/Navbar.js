@@ -47,8 +47,7 @@ useEffect(() => {
 
       {/* Desktop Menu */}
       <nav
-        data-aos="zoom-in"
-        data-aos-duration="800"
+       
         className="hidden sm:flex space-x-4 items-center justify-between md:text-xl text-lg"
       >
         <NavLink href="/" active={isActive("/")}>Home</NavLink>

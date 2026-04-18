@@ -1,5 +1,13 @@
 
 const projects= [
+      {
+      title: "Coffee e-commerce Website",
+      img: "/images/projects/coffeeecommerce.png",
+      description: "Responsive Next.js coffee e‑commerce demo built with Tailwind CSS and React Context. Features include a dynamic catalog with filters, URL‑synced sorting, cart and favorites management, and a notify‑when‑available flow. The UI includes best‑seller ranking, smooth scroll‑restoration, and a component architecture designed for easy extension to real APIs or a headless CMS.",
+      tech: ["React", "Tailwind CSS", "LocalStorage","JavaScript (ES6+)"],
+      demo: "https://coffee-e-commerce-nine.vercel.app/",
+      github: "https://github.com/delaramfarzad9/coffee-e-commerce",
+    },
     {
       title: "Task Manager App",
       img: "/images/projects/taskmanager.png",
