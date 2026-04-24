@@ -7,14 +7,19 @@ export default function AnimatedLine() {
 
   useEffect(() => {
     const typed = new Typed(typedElement.current, {
-      strings: ["Blending design and code"], // your phrase
-      typeSpeed: 100,
-      showCursor: false,
+      strings: [
+        "Blending design and code.",
+        "Where aesthetics meet function.",
+        "Building interfaces that feel right.",
+      ],
+      typeSpeed: 60,
+      showCursor: true,
       cursorChar: "|",
-      loop: true,          // 🔑 this makes it restart automatically
-    loopCount: Infinity, // optional, ensures it repeats forever
-     backSpeed: 80,      // speed of backspacing
-    backDelay: 1500,    // pause before erasing
+      loop: true,
+      loopCount: Infinity,
+      backSpeed: 40,
+      backDelay: 2000,
+      startDelay: 400,
     });
 
     return () => typed.destroy(); // cleanup

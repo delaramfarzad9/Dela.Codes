@@ -62,23 +62,37 @@ const Contact = ({ theme }) => {
         className="flex flex-col  md:flex-row gap-10 md:20 xl:gap-48 px-6 md:px-10  "
       >
         {/* title & links side  */}
-        <div className="flex flex-col   mt-30 md:mt-0 text-mainTxt dark:text-mainTxt-dark lg:min-w-fit   ">
+        <div className="flex flex-col self-center mt-30 md:mt-0 text-mainTxt dark:text-mainTxt-dark lg:min-w-fit">
           {/* title & subtitle */}
-          <div className="flex flex-col  gap-5">
+          <div className="flex flex-col gap-5">
             <motion.h1
               variants={titleVariants}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="text-3xl xl:text-4xl font-black "
+              className="text-3xl xl:text-4xl font-black"
             >
-              Let's work together
+              Let&apos;s work{" "}
+              <span className="bg-linear-to-r from-sky-400 to-pink-500 bg-clip-text text-transparent">
+                together
+              </span>
             </motion.h1>
             <motion.p
               variants={leftVariants}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className=" xl:text-lg "
+              className="xl:text-lg"
             >
               Feel free to reach out for collaborations or opportunities.
             </motion.p>
+            {/* Direct email */}
+            <motion.a
+              variants={leftVariants}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              href="mailto:delaramfarzad9@gmail.com"
+              className="w-fit text-sm font-semibold bg-linear-to-r from-sky-400 to-pink-500 bg-clip-text text-transparent
+                bg-size-[200%_auto] hover:bg-position-[right_center]
+                transition-[background-position] duration-500 ease-out"
+            >
+              delaramfarzad9@gmail.com
+            </motion.a>
           </div>
           {/* links & location */}
           <div className="flex flex-col gap-4 mt-10">
@@ -91,30 +105,30 @@ const Contact = ({ theme }) => {
               <IconLink
                 svgID="github"
                 href="https://github.com/delaramfarzad9"
-                className="xl:w-20 xl:h-20  w-10 h-10 md:w-14 md:h-14 "
+                className="w-10 h-10 md:w-12 md:h-12 xl:w-13 xl:h-13 transition-transform duration-200 hover:scale-110"
               />
               <IconLink
                 svgID="linkedin"
                 href="https://www.linkedin.com/in/delaram-farzad-7191ab177?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                className="xl:w-20 xl:h-20  w-10 h-10 md:w-14 md:h-14"
+                className="w-10 h-10 md:w-12 md:h-12 xl:w-13 xl:h-13 transition-transform duration-200 hover:scale-110"
               />
               <IconLink
                 svgID="email"
                 href="mailto:delaramfarzad9@gmail.com"
-                className="xl:w-20 xl:h-20  w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16"
+                className="w-10 h-10 md:w-12 md:h-12 xl:w-13 xl:h-13 transition-transform duration-200 hover:scale-110"
               />
             </motion.div>
             {/* location  */}
             <motion.div
               variants={leftVariants}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className="flex flex-row items-center gap-2 opacity-80"
+              className="flex flex-row items-center gap-2 opacity-60"
             >
               <Svg
                 svgId="location"
-                className="w-6 h-6 lg:w-8 lg:h-8 dark:text-white  "
+                className="w-5 h-5 dark:text-white shrink-0"
               />
-              <span className="">Leamington Spa, UK</span>
+              <span className="text-sm">Leamington Spa, UK</span>
             </motion.div>
           </div>
         </div>
@@ -124,36 +138,89 @@ const Contact = ({ theme }) => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-mainTxt dark:text-mainTxt-dark w-full lg:min-w-md lg:w-full px-4 md:px-0"
         >
-          {showMessage && ( <motion.p
-           initial={{ opacity: 0, y: -10 }} 
-           animate={{ opacity: 1, y: 0 }}
-            className="text-green-500 mb-3 text-center" > Message sent successfully! </motion.p> )}
+          {/* Success banner */}
+          {showMessage && (
+            <motion.div
+              initial={{ opacity: 0, y: -12 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="flex items-center gap-3 bg-green-500/10 border border-green-500/30 text-green-500 rounded-xl px-4 py-3 mb-5 text-sm font-semibold"
+            >
+              <svg
+                className="w-4 h-4 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              Message sent! I&apos;ll get back to you soon.
+            </motion.div>
+          )}
+
           <form
             action="https://formsubmit.co/delaramfarzad9@gmail.com"
             method="POST"
-            className="flex flex-col gap-5 dark:bg-[#1F2937] bg-[#E5E7EB] p-6 rounded-lg shadow-lg"
+            className="flex flex-col gap-5 bg-white/30 dark:bg-white/5 backdrop-blur-sm border border-white/50 dark:border-white/10 rounded-2xl p-6 md:p-10 shadow-xl"
           >
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-              className="px-4 py-2 rounded-md border border-gray-700  focus:outline-none focus:ring-2 focus:ring-pink-500"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-              className="px-4 py-2 rounded-md border border-gray-700   focus:outline-none focus:ring-2 focus:ring-sky-400"
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-              required
-              className="px-4 py-2 rounded-md border border-gray-700   focus:outline-none focus:ring-2 focus:ring-orange-400"
-            ></textarea>
+            {/* Name */}
+            <div className="flex flex-col gap-1">
+              <label
+                htmlFor="contact-name"
+                className="text-xs font-bold uppercase tracking-widest opacity-50"
+              >
+                Name
+              </label>
+              <input
+                id="contact-name"
+                type="text"
+                name="name"
+                placeholder="Your full name"
+                required
+                className="px-4 py-3 rounded-xl bg-white/70 dark:bg-gray-700/50 border border-gray-200 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-sky-400 transition-all duration-200 placeholder:opacity-40"
+              />
+            </div>
+
+            {/* Email */}
+            <div className="flex flex-col gap-1">
+              <label
+                htmlFor="contact-email"
+                className="text-xs font-bold uppercase tracking-widest opacity-50"
+              >
+                Email
+              </label>
+              <input
+                id="contact-email"
+                type="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+                className="px-4 py-3 rounded-xl bg-white/70 dark:bg-gray-700/50 border border-gray-200 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-sky-400 transition-all duration-200 placeholder:opacity-40"
+              />
+            </div>
+
+            {/* Message */}
+            <div className="flex flex-col gap-1">
+              <label
+                htmlFor="contact-message"
+                className="text-xs font-bold uppercase tracking-widest opacity-50"
+              >
+                Message
+              </label>
+              <textarea
+                id="contact-message"
+                name="message"
+                placeholder="What's on your mind?"
+                rows="5"
+                required
+                className="px-4 py-3 rounded-xl bg-white/70 dark:bg-gray-700/50 border border-gray-200 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-sky-400 transition-all duration-200 placeholder:opacity-40 resize-none"
+              />
+            </div>
+
             {/* hidden inputs  */}
             <input type="hidden" name="_captcha" value="false" />
             <input
@@ -165,15 +232,24 @@ const Contact = ({ theme }) => {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="px-10 py-4 rounded-md bg-linear-to-r from-pink-600 to-orange-400 
-               text-white font-semibold shadow-md 
-               hover:scale-105 hover:shadow-lg transition duration-300 ease-out"
+                className="inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl font-semibold text-white bg-linear-to-r from-pink-600 to-orange-400 shadow-md hover:scale-105 active:scale-95 hover:shadow-xl transition-all duration-300 ease-out cursor-pointer"
               >
-                Send
+                <svg
+                  className="w-4 h-4 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"
+                  />
+                </svg>
+                Send Message
               </button>
             </div>
-
-           
           </form>
         </motion.div>
 
