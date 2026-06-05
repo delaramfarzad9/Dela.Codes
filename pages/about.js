@@ -40,7 +40,7 @@ export default function About({ theme }) {
     <>
       <section
         id="about"
-        className="min-h-screen max-w-7xl mx-auto
+        className="min-h-screen mx-auto
  relative z-10 md:mx-20  mt-20 mb-20 lg:mt-0 "
       >
         <div className="flex flex-col justify-center items-center ">
@@ -121,10 +121,7 @@ export default function About({ theme }) {
                   }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
-                  I’ve built several projects, including a personal website in
-                  Next.js, a React admin dashboard, a task manager app, a
-                  real‑time weather app using APIs, and multiple smaller web
-                  applications.
+                  I’ve built several projects, including a coffee e‑commerce website in Next.js, a React admin dashboard, a task manager app, and a real‑time weather app using APIs. I also developed this personal website in Next.js.
                 </motion.p>
                 <motion.p
                   variants={{

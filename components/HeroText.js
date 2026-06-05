@@ -12,7 +12,7 @@ export default function HeroText({name,title1,title2}) {
        variants={{ hidden: { opacity: 0, x: -40 }, 
        visible: { opacity: 1, x: 0 } }} 
        transition={{ duration: 0.6, ease: "easeOut" }}
-        className='mb-6 text-lg sm:text-xl md:text-2xl lg:text-3xl text-orange-400 font-semibold' > Hello, My Name Is <span className='font-bold text-sky-500 ml-2'>{name}</span>
+        className='mb-6 text-lg sm:text-xl md:text-2xl lg:text-3xl text-orange-400 font-semibold' > Hello, I'm <span className='font-bold text-sky-500 ml-2'>{name}</span>
          </motion.h1>
           <motion.h2 
           variants={{ hidden: { opacity: 0, x: -40 }, visible: { opacity: 1, x: 0 } }}

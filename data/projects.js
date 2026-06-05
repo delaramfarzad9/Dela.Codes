@@ -3,7 +3,7 @@ const projects= [
       {
       title: "Coffee e-commerce Website",
       img: "/images/projects/coffeeecommerce.png",
-      description: "Responsive Next.js coffee e‑commerce demo built with Tailwind CSS and React Context. Features include a dynamic catalog with filters, URL‑synced sorting, cart and favorites management, and a notify‑when‑available flow. The UI includes best‑seller ranking, smooth scroll‑restoration, and a component architecture designed for easy extension to real APIs or a headless CMS.",
+      description: "A modern, fully responsive coffee e‑commerce platform built with Next.js and Tailwind CSS. It includes a dynamic product catalog with filtering, a smooth shopping cart, and thoughtful UX enhancements such as scroll‑position saving, click‑outside interactions, auto‑focused inputs, and clean custom validation to create a seamless and intuitive shopping experience.",
       tech: ["React", "Tailwind CSS", "LocalStorage","JavaScript (ES6+)"],
       demo: "https://coffee-e-commerce-nine.vercel.app/",
       github: "https://github.com/delaramfarzad9/coffee-e-commerce",
@@ -24,13 +24,13 @@ const projects= [
       demo: "https://delaramfarzad9.github.io/weather-app/",
       github: "https://github.com/delaramfarzad9/weather-app",
     },
-    {
-      title: "Admin Dashboard",
-      img: "/images/projects/dashboard.png",
-      description: "A responsive admin dashboard built with React and Tailwind CSS, featuring interactive charts, data tables, and basic user management functionality. Designed with a clean layout and reusable components for a smooth and efficient user experience.",
-      tech: ["React", "Tailwind", "Chart.js"],
-      demo: "https://your-admin-demo.com",
-      github: "https://github.com/delaramfarzad9/admin-dashboard",
-    },
+    // {
+    //   title: "Admin Dashboard",
+    //   img: "/images/projects/dashboard.png",
+    //   description: "A responsive admin dashboard built with React and Tailwind CSS, featuring interactive charts, data tables, and basic user management functionality. Designed with a clean layout and reusable components for a smooth and efficient user experience.",
+    //   tech: ["React", "Tailwind", "Chart.js"],
+    //   demo: "https://your-admin-demo.com",
+    //   github: "https://github.com/delaramfarzad9/admin-dashboard",
+    // },
   ];
   export default projects;

@@ -51,7 +51,7 @@ const Contact = ({ theme }) => {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ staggerChildren: 0.2 }}
       id="contact"
-      className="max-w-7xl mx-auto  min-h-screen
+      className=" mx-auto  min-h-screen
  flex justify-center items-center relative z-10 md:mx-20 mb-10 md:mb-0 landscape-padding "
     >
       <motion.div
