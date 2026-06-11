@@ -1,5 +1,5 @@
 
-const projects= [
+const   projects= [
       {
       title: "Coffee e-commerce Website",
       img: "/images/projects/coffeeecommerce.png",
