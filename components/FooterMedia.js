@@ -6,7 +6,7 @@ export default function FooterMedia() {
       <IconLink svgID="github" href="https://github.com/delaramfarzad9" />
       <IconLink
         svgID="linkedin"
-        href="www.linkedin.com/in/delaram-farzad-7191ab177"
+        href="https://www.linkedin.com/in/delaram-farzad"
       />
     </div>
   );

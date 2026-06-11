@@ -109,7 +109,7 @@ const Contact = ({ theme }) => {
               />
               <IconLink
                 svgID="linkedin"
-                href="www.linkedin.com/in/delaram-farzad-7191ab177"
+                href="https://www.linkedin.com/in/delaram-farzad"
                 className="w-10 h-10 md:w-12 md:h-12 xl:w-13 xl:h-13 transition-transform duration-200 hover:scale-110"
               />
               <IconLink

@@ -76,7 +76,7 @@ const ProjectsCard = ({ project, index }) => {
         </h2>
 
         {/* Description */}
-        <p className="text-sm md:text-base lg:text-lg leading-relaxed opacity-75">
+        <p className="text-sm md:text-base lg:text-lg leading-relaxed opacity-75 whitespace-pre-line">
           {project.description}
         </p>
 
