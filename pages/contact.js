@@ -226,7 +226,7 @@ const Contact = ({ theme }) => {
             <input
               type="hidden"
               name="_next"
-              value="https://next-personal-app-seven.vercel.app/contact?submitted=true"
+              value="https://dela-codes.vercel.app/contact?submitted=true"
             />
 
             <div className="flex justify-center">
