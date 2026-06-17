@@ -25,7 +25,7 @@ export default function Herosection({ children, theme }) {
       <div className="flex md:flex-row flex-col-reverse  max-w-screen   mx-6 md:mx-20  md:justify-between md:items-center justify-end mt-24 md:mt-0 md:mb-0 mb-10 landscape-hero">
        
        
-        <HeroText name="Dela" title1="Front-End Developer" title2="UI/UX Designer"/>
+        <HeroText name="Dela" title1="Front-End Developer" title2="UI/UX-Focused"/>
        
 
    <motion.div 

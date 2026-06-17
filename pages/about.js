@@ -1,5 +1,5 @@
 import Tech from "@/components/Tech";
-import { skills, learning, design, tools } from "@/data/skills";
+import { skills, learning, design, tools, qualityFocusedDevelopment } from "@/data/skills";
 import SkillSection from "@/components/SkillSection";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -227,6 +227,14 @@ export default function About({ theme }) {
             {/* tools  */}
             <motion.div variants={fadeRight}>
               <SkillSection title="Tools" items={tools} variant="tools" />
+            </motion.div>
+            {/* quality focused development  */}
+            <motion.div variants={fadeLeft}>
+              <SkillSection
+                title="Quality-Focused Development"
+                items={qualityFocusedDevelopment}
+                variant="qualityFocusedDevelopment"
+              />
             </motion.div>
           </motion.div>
         </div>

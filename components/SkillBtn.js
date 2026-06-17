@@ -7,6 +7,7 @@ export default function SkillBtn({ skill, variant = "default" }) {
     learning: "bg-gradient-to-r from-orange-400 to-pink-500/70   ",
     design: "bg-pink-600 ",
     tools: "bg-orange-500 ",
+    qualityFocusedDevelopment: "bg-gradient-to-r from-sky-400 to-pink-500 ",
   };
 
   return <span className={`${base} ${styles[variant]}`}>{skill}</span>;
