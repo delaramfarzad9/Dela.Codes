@@ -39,7 +39,7 @@ export default function Navbar({ theme, onThemeChange }) {
       <div className="flex flex-row gap-4 items-center">
         <Link
           href="/"
-          className="text-base sm:text-lg md:text-xl font-architectsDaughter hover:text-sky-400 dark:hover:text-sky-400 transition-colors duration-300"
+          className="text-base sm:text-lg md:text-xl font-architectsDaughter hover:text-sky-400 active:text-sky-400 dark:hover:text-sky-400 dark:active:text-sky-400 transition-colors duration-300"
         >
           {`<Delaram Farzad/>`}
         </Link>

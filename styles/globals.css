@@ -1,130 +1,134 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
- 
-  /* League Spartan Font Faces */
-  @font-face {
-    font-family: "LeagueSpartan";
-    src: url("/fonts/league-spartan-v15-latin-200.woff2") format("woff2");
-    font-weight: 200;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "LeagueSpartan";
-    src: url("/fonts/league-spartan-v15-latin-regular.woff2") format("woff2");
-    font-weight: 400;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "LeagueSpartan";
-    src: url("/fonts/league-spartan-v15-latin-500.woff2") format("woff2");
-    font-weight: 500;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "LeagueSpartan";
-    src: url("/fonts/league-spartan-v15-latin-600.woff2") format("woff2");
-    font-weight: 600;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "LeagueSpartan";
-    src: url("/fonts/league-spartan-v15-latin-700.woff2") format("woff2");
-    font-weight: 700;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "LeagueSpartan";
-    src: url("/fonts/league-spartan-v15-latin-900.woff2") format("woff2");
-    font-weight: 900;
-    font-display: swap;
-  }
 
-  /* Alan Sans Font Faces */
-  @font-face {
-    font-family: "AlanSans";
-    src: url("/fonts/alanleague-spartan-v15-latin-500-sans-v1-latin-300.woff2") format("woff2");
-    font-weight: 300;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "AlanSans";
-    src: url("/fonts/alan-sans-v1-latin-regular.woff2") format("woff2");
-    font-weight: 400;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "AlanSans";
-    src: url("/fonts/alan-sans-v1-latin-500.woff2") format("woff2");
-    font-weight: 500;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "AlanSans";
-    src: url("/fonts/alan-sans-v1-latin-600.woff2") format("woff2");
-    font-weight: 600;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "AlanSans";
-    src: url("/fonts/alan-sans-v1-latin-700.woff2") format("woff2");
-    font-weight: 700;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "AlanSans";
-    src: url("/fonts/alan-sans-v1-latin-800.woff2") format("woff2");
-    font-weight: 800;
-    font-display: swap;
-  }
-  /* pacifico-regular - latin */
+/* League Spartan Font Faces */
 @font-face {
-  font-display: swap; 
-  font-family: 'Pacifico';
+  font-family: "LeagueSpartan";
+  src: url("/fonts/league-spartan-v15-latin-200.woff2") format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LeagueSpartan";
+  src: url("/fonts/league-spartan-v15-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LeagueSpartan";
+  src: url("/fonts/league-spartan-v15-latin-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LeagueSpartan";
+  src: url("/fonts/league-spartan-v15-latin-600.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LeagueSpartan";
+  src: url("/fonts/league-spartan-v15-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LeagueSpartan";
+  src: url("/fonts/league-spartan-v15-latin-900.woff2") format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+
+/* Alan Sans Font Faces */
+@font-face {
+  font-family: "AlanSans";
+  src: url("/fonts/alanleague-spartan-v15-latin-500-sans-v1-latin-300.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AlanSans";
+  src: url("/fonts/alan-sans-v1-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AlanSans";
+  src: url("/fonts/alan-sans-v1-latin-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AlanSans";
+  src: url("/fonts/alan-sans-v1-latin-600.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AlanSans";
+  src: url("/fonts/alan-sans-v1-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AlanSans";
+  src: url("/fonts/alan-sans-v1-latin-800.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+/* pacifico-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Pacifico";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/pacifico-v23-latin-regular.woff2") format('woff2'); 
-  
+  src: url("/fonts/pacifico-v23-latin-regular.woff2") format("woff2");
 }
 /* architects-daughter-regular - latin */
 @font-face {
-  font-display: swap; 
-  font-family: 'Architects Daughter';
+  font-display: swap;
+  font-family: "Architects Daughter";
   font-style: normal;
   font-weight: 400;
-  src: url('/fonts/architects-daughter-v20-latin-regular.woff2') format('woff2'); 
+  src: url("/fonts/architects-daughter-v20-latin-regular.woff2") format("woff2");
 }
 
-@theme{
-  --font-spartan:LeagueSpartan,"sans-serif";
-   --font-pacifico:Pacifico ,"sans-serif"; 
-  --font-AlanSans:AlanSans,"sans-serif";
+@theme {
+  --font-spartan: LeagueSpartan, "sans-serif";
+  --font-pacifico: Pacifico, "sans-serif";
+  --font-AlanSans: AlanSans, "sans-serif";
   --font-architectsDaughter: Architects Daughter, "cursive";
-  --color-mainTxt:oklch(27.8% 0.033 256.848);
-  --color-mainTxt-dark:oklch(92.8% 0.006 264.531);
-  --animate-spin-pause-spin:  spin-pause-spin 25s ease-in-out  infinite;
- @keyframes spin-pause-spin {
- 0%, 10% {
-    transform: rotate(0deg); /* Start and pause at 0° */
-  }
-  10%, 40% {
-    transform: rotate(180deg); /* Rotate and pause at 180° */
-  }
-  40%, 60% {
-    transform: rotate(0deg); /* Rotate back and pause at 0° */
-  }
-  60%, 90% {
-    transform: rotate(180deg); /* Rotate and pause at 180° */
-  }
-  90%, 100% {
-    transform: rotate(0deg); /* Rotate back and final pause at 0° */
+  --color-mainTxt: oklch(27.8% 0.033 256.848);
+  --color-mainTxt-dark: oklch(92.8% 0.006 264.531);
+  --animate-spin-pause-spin: spin-pause-spin 25s ease-in-out infinite;
+  @keyframes spin-pause-spin {
+    0%,
+    10% {
+      transform: rotate(0deg); /* Start and pause at 0° */
+    }
+    10%,
+    40% {
+      transform: rotate(180deg); /* Rotate and pause at 180° */
+    }
+    40%,
+    60% {
+      transform: rotate(0deg); /* Rotate back and pause at 0° */
+    }
+    60%,
+    90% {
+      transform: rotate(180deg); /* Rotate and pause at 180° */
+    }
+    90%,
+    100% {
+      transform: rotate(0deg); /* Rotate back and final pause at 0° */
+    }
   }
 }
+body {
+  @apply font-AlanSans font-medium text-mainTxt dark:text-mainTxt-dark;
 }
-body{
-  @apply font-AlanSans font-medium text-mainTxt dark:text-mainTxt-dark
- 
-}
-#paritcles{
+#paritcles {
   z-index: -1;
   height: 100%;
   width: 100%;
@@ -170,13 +174,14 @@ body{
   }
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
-  background-color: #E5E7EB; /* or your light theme background */
+  background-color: #e5e7eb; /* or your light theme background */
 }
 
 .dark body {
-  background-color: #1F2937; /* your dark theme background */
+  background-color: #1f2937; /* your dark theme background */
 }
 @media (orientation: landscape) and (max-height: 500px) {
   .landscape-projects {
@@ -188,4 +193,12 @@ html, body {
     font-size: 1.75rem !important; /* around text-2xl */
     line-height: 1.2 !important;
   }
+}
+
+/* Ensure :active fires reliably on iOS Safari for interactive elements */
+a,
+button,
+[role="button"] {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }

@@ -9,7 +9,10 @@ export default function DarkLightToggle({ theme, onThemeChange }) {
   }
 
   return (
-    <button onClick={toggleTheme}>
+    <button
+      onClick={toggleTheme}
+      className="hover:scale-110 active:scale-95 transition-transform duration-200"
+    >
       <Svg
         svgId={isDark ? "sun" : "moon"}
         className={`cursor-pointer transition-transform duration-500 md:w-8 md:h-8 

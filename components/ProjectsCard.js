@@ -53,10 +53,10 @@ const ProjectsCard = ({ project, index }) => {
             alt={project.title}
             width={600}
             height={338}
-            className="w-full aspect-video object-fit  transition-transform duration-500 group-hover:scale-[1.04]"
+            className="w-full aspect-video object-fit  transition-transform duration-500 group-hover:scale-[1.04] group-active:scale-[1.04]"
           />
           {/* Hover color wash overlay */}
-          <div className="absolute inset-0 bg-linear-to-br from-sky-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+          <div className="absolute inset-0 bg-linear-to-br from-sky-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300 pointer-events-none" />
         </div>
       </motion.div>
 

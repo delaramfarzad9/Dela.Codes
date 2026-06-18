@@ -6,7 +6,7 @@ export default function CopyRight() {
         © {year}{" "}
         <a
           href="/"
-          className="hover:text-sky-500 dark:hover:text-sky-400 transition-colors duration-200"
+          className="hover:text-sky-500 active:text-sky-500 dark:hover:text-sky-400 dark:active:text-sky-400 transition-colors duration-200"
         >
           Delaram Farzad
         </a>

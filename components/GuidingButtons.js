@@ -13,6 +13,7 @@ const GuidingButtons = ({ task, page }) => {
     shadow-[0_8px_20px_rgba(0,0,0,0.25)]
     overflow-hidden transition-all duration-300 ease-out
     hover:scale-105 hover:shadow-[0_12px_28px_rgba(0,0,0,0.35)]
+    active:shadow-[0_12px_28px_rgba(0,0,0,0.35)]
     group
   "
       >

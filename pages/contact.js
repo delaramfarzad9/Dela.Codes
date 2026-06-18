@@ -88,7 +88,7 @@ const Contact = ({ theme }) => {
               transition={{ duration: 0.7, ease: "easeOut" }}
               href="mailto:delaramfarzad9@gmail.com"
               className="w-fit text-sm font-semibold bg-linear-to-r from-sky-400 to-pink-500 bg-clip-text text-transparent
-                bg-size-[200%_auto] hover:bg-position-[right_center]
+                bg-size-[200%_auto] hover:bg-position-[right_center] active:bg-position-[right_center]
                 transition-[background-position] duration-500 ease-out"
             >
               delaramfarzad9@gmail.com
@@ -105,17 +105,17 @@ const Contact = ({ theme }) => {
               <IconLink
                 svgID="github"
                 href="https://github.com/delaramfarzad9"
-                className="w-10 h-10 md:w-12 md:h-12 xl:w-13 xl:h-13 transition-transform duration-200 hover:scale-110"
+                className="w-10 h-10 md:w-12 md:h-12 xl:w-13 xl:h-13 transition-transform duration-200 hover:scale-110 active:scale-105"
               />
               <IconLink
                 svgID="linkedin"
                 href="https://www.linkedin.com/in/delaram-farzad"
-                className="w-10 h-10 md:w-12 md:h-12 xl:w-13 xl:h-13 transition-transform duration-200 hover:scale-110"
+                className="w-10 h-10 md:w-12 md:h-12 xl:w-13 xl:h-13 transition-transform duration-200 hover:scale-110 active:scale-105"
               />
               <IconLink
                 svgID="email"
                 href="mailto:delaramfarzad9@gmail.com"
-                className="w-10 h-10 md:w-12 md:h-12 xl:w-13 xl:h-13 transition-transform duration-200 hover:scale-110"
+                className="w-10 h-10 md:w-12 md:h-12 xl:w-13 xl:h-13 transition-transform duration-200 hover:scale-110 active:scale-105"
               />
             </motion.div>
             {/* location  */}
