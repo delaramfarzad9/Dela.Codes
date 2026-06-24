@@ -12,7 +12,7 @@ Framer Motion — Integrated subtle animations and transitions to create a poli
 `,
 
       tech: ["React", "Tailwind CSS", "LocalStorage","JavaScript (ES6+)"],
-      demo: "https://coffee-e-commerce-nine.vercel.app/",
+      demo: "https://setcoffee-shop.vercel.app/",
       github: "https://github.com/delaramfarzad9/coffee-e-commerce",
     },
     {
