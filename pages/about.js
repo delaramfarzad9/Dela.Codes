@@ -157,7 +157,7 @@ export default function About({ theme }) {
                 className="mt-8"
               >
                 <a
-                  href="/Delaram_Farzad_Resume_2026-06-11.pdf"
+                  href="/Delaram_Farzad_sep-Resume_2026-09-02.pdf"
                   download
                   className="relative inline-flex items-center justify-center gap-2 py-3 px-7 overflow-hidden font-semibold tracking-wide text-white bg-sky-400 rounded-xl shadow-lg transition-all duration-300 ease-out hover:shadow-xl hover:scale-105 active:scale-95 group"
                 >
