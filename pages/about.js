@@ -99,53 +99,57 @@ export default function About({ theme }) {
                 }}
               >
                 <motion.p
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                >
-                  I’m Dela, a Front‑End Developer with a strong focus on
-                  creating clean, responsive, and user‑friendly interfaces. I
-                  work with <Tech tech="HTML" />, <Tech tech="CSS" />,
-                  <Tech tech="JavaScript" /> ,<Tech tech="Tailwind CSS" /> ,
-                  <Tech tech="React.js" /> , and I’m currently advancing my
-                  skills in
-                  <Tech tech="Next.js" /> and exploring{" "}
-                  <Tech tech="TypeScript" />.
-                </motion.p>
-                <motion.p
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                >
-                  I’ve built several projects, including a coffee e‑commerce website in Next.js, a React admin dashboard, a task manager app, and a real‑time weather app using APIs. I also developed this personal website in Next.js.
-                </motion.p>
-                <motion.p
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                >
-                  With a background in architecture and <Tech tech="UI/UX" />{" "}
-                  design, I bring a strong visual perspective and a love for
-                  creating intuitive digital experiences. I’m looking for
-                  opportunities to grow, collaborate, and gain real‑world
-                  experience.
-                </motion.p>
-                <motion.p
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: { opacity: 1, y: 0 },
-                  }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                >
-                  I speak <Tech tech="English" />, <Tech tech="German" />, and{" "}
-                  <Tech tech="Persian" />.
-                </motion.p>
+  variants={{
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  }}
+  transition={{ duration: 0.5, ease: "easeOut" }}
+>
+  I’m Dela, a Front-End Developer based in the UK, building clean,
+  responsive and user-friendly interfaces with <Tech tech="HTML" />,{" "}
+  <Tech tech="CSS" />, <Tech tech="JavaScript" />,{" "}
+  <Tech tech="React.js" />, <Tech tech="Next.js" /> and{" "}
+  <Tech tech="Tailwind CSS" />. I’m currently developing my React and
+  Next.js skills further while learning <Tech tech="TypeScript" />.
+</motion.p>
+
+<motion.p
+  variants={{
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  }}
+  transition={{ duration: 0.5, ease: "easeOut" }}
+>
+  I’ve built several projects, including a Next.js coffee e-commerce
+  website, a React admin dashboard, a task manager, a weather
+  application using an external API, and this Next.js developer
+  portfolio.
+</motion.p>
+
+<motion.p
+  variants={{
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  }}
+  transition={{ duration: 0.5, ease: "easeOut" }}
+>
+  With a background in architecture and <Tech tech="UI/UX" /> design
+  training, I enjoy combining development with a design-focused
+  approach to create clear and intuitive interfaces. I’m looking for
+  opportunities to contribute, collaborate and continue growing within
+  a professional development team.
+</motion.p>
+
+<motion.p
+  variants={{
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  }}
+  transition={{ duration: 0.5, ease: "easeOut" }}
+>
+  I speak <Tech tech="English" />, <Tech tech="German" /> and{" "}
+  <Tech tech="Persian" />.
+</motion.p>
               </motion.div>
 
               {/* Download CV */}
