@@ -26,7 +26,7 @@ export const design = [
 export const tools = [
   "Git & GitHub",
   "VS Code",
-  "APIs / Fetch / Axios",
+  "APIs / Fetch",
   "Vercel",
   "npm",
   "Figma-to-Code workflow",
@@ -34,5 +34,4 @@ export const tools = [
 export const qualityFocusedDevelopment = [
   "Accessibility basics (a11y)",
   "SEO basics for Next.js",
-  "Performance optimisation",
 ];
