@@ -59,7 +59,7 @@ const Contact = ({ theme }) => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         transition={{ staggerChildren: 0.2 }}
-        className="flex flex-col  md:flex-row gap-10 md:20 xl:gap-48 px-6 md:px-10  "
+        className="flex flex-col  md:flex-row gap-10 md:gap-20 xl:gap-48 px-6 md:px-10  "
       >
         {/* title & links side  */}
         <div className="flex flex-col self-center mt-30 md:mt-0 text-mainTxt dark:text-mainTxt-dark lg:min-w-fit">

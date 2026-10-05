@@ -60,7 +60,7 @@ export default function About({ theme }) {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="shrink-0 p-0.75 rounded-full bg-linear-to-br from-sky-400 to-pink-500 shadow-2xl"
+              className="shrink-0 p-0.75 rounded-full bg-linear-to-br from-sky-400 to-pink-500 shadow-2xl lg:-translate-y-12"
             >
               <Image
                 src="/images/about/about3.png"
@@ -105,12 +105,14 @@ export default function About({ theme }) {
   }}
   transition={{ duration: 0.5, ease: "easeOut" }}
 >
-  I’m Dela, a Front-End Developer based in the UK, building clean,
-  responsive and user-friendly interfaces with <Tech tech="HTML" />,{" "}
-  <Tech tech="CSS" />, <Tech tech="JavaScript" />,{" "}
-  <Tech tech="React.js" />, <Tech tech="Next.js" /> and{" "}
-  <Tech tech="Tailwind CSS" />. I’m currently developing my React and
-  Next.js skills further while learning <Tech tech="TypeScript" />.
+  I’m Dela, a Frontend Developer based in the UK, building responsive,
+  accessible and user-friendly web applications with{" "}
+  <Tech tech="JavaScript" />, <Tech tech="React.js" />,{" "}
+  <Tech tech="Next.js" /> and <Tech tech="Tailwind CSS" />. I also have
+  experience working with <Tech tech="REST APIs" /> and I’m currently
+  expanding my skills with <Tech tech="TypeScript" />,{" "}
+  <Tech tech="Node.js" />, <Tech tech="Express" /> and{" "}
+  <Tech tech="PostgreSQL" />.
 </motion.p>
 
 <motion.p
@@ -120,10 +122,12 @@ export default function About({ theme }) {
   }}
   transition={{ duration: 0.5, ease: "easeOut" }}
 >
-  I’ve built several projects, including a Next.js coffee e-commerce
-  website, a React admin dashboard, a task manager, a weather
-  application using an external API, and this Next.js developer
-  portfolio.
+ I’ve built and deployed several projects, including a Next.js coffee
+  e-commerce website, a React task manager, a weather application using
+  a live API, and this Next.js developer portfolio. I’m also currently
+  building a larger travel application where I’m working across the
+  frontend, API and database to better understand how complete products
+  are built.
 </motion.p>
 
 <motion.p
@@ -133,11 +137,10 @@ export default function About({ theme }) {
   }}
   transition={{ duration: 0.5, ease: "easeOut" }}
 >
-  With a background in architecture and <Tech tech="UI/UX" /> design
+   With a background in architecture and <Tech tech="UI/UX" /> design
   training, I enjoy combining development with a design-focused
-  approach to create clear and intuitive interfaces. I’m looking for
-  opportunities to contribute, collaborate and continue growing within
-  a professional development team.
+  approach. I care about usability, accessibility and creating
+  interfaces that are both technically solid and intuitive for users.
 </motion.p>
 
 <motion.p
