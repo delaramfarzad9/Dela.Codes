@@ -1,5 +1,5 @@
 import Tech from "@/components/Tech";
-import { skills, learning, design, tools, qualityFocusedDevelopment } from "@/data/skills";
+import { skills, learning, design, tools,backend, qualityFocusedDevelopment } from "@/data/skills";
 import SkillSection from "@/components/SkillSection";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
@@ -122,12 +122,7 @@ export default function About({ theme }) {
   }}
   transition={{ duration: 0.5, ease: "easeOut" }}
 >
- I’ve built and deployed several projects, including a Next.js coffee
-  e-commerce website, a React task manager, a weather application using
-  a live API, and this Next.js developer portfolio. I’m also currently
-  building a larger travel application where I’m working across the
-  frontend, API and database to better understand how complete products
-  are built.
+I've built and deployed several projects, including a Next.js e-commerce website, a React task manager, and  a responsive business landing page developed as part of my front-end internship with AppRo8. I'm also  a full-stack UK travel application where I've developed REST API endpoints, integrated PostgreSQL, and connected backend data to the React frontend.
 </motion.p>
 
 <motion.p
@@ -164,7 +159,7 @@ export default function About({ theme }) {
                 className="mt-8"
               >
                 <a
-                  href="/Delaram_Farzad_Resume_2026-10-04 $.pdf"
+                  href="/Delaram_Farzad_Resume_2026-10-20 $.pdf"
                   download
                   className="relative inline-flex items-center justify-center gap-2 py-3 px-7 overflow-hidden font-semibold tracking-wide text-white bg-sky-400 rounded-xl shadow-lg transition-all duration-300 ease-out hover:shadow-xl hover:scale-105 active:scale-95 group"
                 >
@@ -243,6 +238,13 @@ export default function About({ theme }) {
                 variant="qualityFocusedDevelopment"
               />
             </motion.div>
+            <motion.div variants={fadeRight}>
+  <SkillSection
+    title="Backend & APIs"
+    items={backend}
+    variant="default"
+  />
+</motion.div>
           </motion.div>
         </div>
       </section>

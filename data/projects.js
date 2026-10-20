@@ -1,5 +1,47 @@
 
 const   projects= [
+  {
+  title: "WebSol — Business Landing Page",
+  img: "/images/projects/websol-preview.png",
+  description: `· React & Vite — Built and deployed a fully responsive business landing page with a clean, modern design and reusable components.
+· Tailwind CSS — Created a mobile-first layout with consistent styling across desktop, tablet, and mobile devices.
+· Interactive navigation — Implemented smooth section scrolling, a sticky navbar, and an animated mobile menu.
+· Accessibility — Added keyboard navigation, Escape-key handling, and background scroll locking for improved usability.
+· Motion for React — Integrated subtle animations and transitions to enhance the user experience.
+· Git & Vercel — Managed source code with Git and GitHub and deployed the project using Vercel.`,
+  tech: [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "JavaScript (ES6+)",
+    "Motion for React"
+  ],
+  demo: "https://landing-page-project-rose.vercel.app/",
+  github: "https://github.com/delaramfarzad9/landing-page-project",
+},
+
+{
+  title: "VoyaVista — UK Travel Application",
+  img: "/images/projects/voyavista.png",
+  status: "In Progress",
+  description: `· React & Tailwind CSS — Building a responsive UK travel application with reusable components and a modern interface.
+· Full-stack development — Developing the frontend with React and the backend with Node.js and Express.
+· PostgreSQL — Created and populated a PostgreSQL database to manage travel destinations and experiences.
+· REST API — Built API endpoints and integrated backend data into the React frontend.
+· Explore features — Implemented destination search, filtering, sorting, and dynamic experience details.
+· UI/UX — Designed the application from initial concept through interface design and development.`,
+  tech: [
+    "React",
+    "Tailwind CSS",
+    "Node.js",
+    "Express",
+    "PostgreSQL",
+    "REST API"
+  ],
+  demo: "",
+  github: "https://github.com/delaramfarzad9/voyavista",
+},
+
       {
       title: "Coffee e-commerce Website",
       img: "/images/projects/coffeeecommerce.png",
