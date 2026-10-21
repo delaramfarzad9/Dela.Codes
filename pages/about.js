@@ -87,68 +87,63 @@ export default function About({ theme }) {
                   Me
                 </span>
               </motion.h1>
-              {/* paragraphs */}
-              <motion.div
-                className="flex flex-col gap-5 w-full md:text-lg leading-relaxed"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={{
-                  hidden: {},
-                  visible: { transition: { staggerChildren: 0.2 } },
-                }}
-              >
-                <motion.p
+              
+{/* paragraphs */}
+<motion.div
+  className="flex flex-col gap-5 w-full md:text-lg leading-relaxed"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
   variants={{
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.2 } },
   }}
-  transition={{ duration: 0.5, ease: "easeOut" }}
 >
-  I’m Dela, a Frontend Developer based in the UK, building responsive,
-  accessible and user-friendly web applications with{" "}
-  <Tech tech="JavaScript" />, <Tech tech="React.js" />,{" "}
-  <Tech tech="Next.js" /> and <Tech tech="Tailwind CSS" />. I also have
-  experience working with <Tech tech="REST APIs" /> and I’m currently
-  expanding my skills with <Tech tech="TypeScript" />,{" "}
-  <Tech tech="Node.js" />, <Tech tech="Express" /> and{" "}
-  <Tech tech="PostgreSQL" />.
-</motion.p>
+  <motion.p
+    variants={{
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0 },
+    }}
+    transition={{ duration: 0.5, ease: "easeOut" }}
+  >
+  I'm Dela, a Frontend Developer based in the UK with professional
+  experience building responsive websites and UI components using<Tech tech="JavaScript" />,<Tech tech="React.js" /> and<Tech tech="Tailwind CSS" />. I also develop web applications
+  with<Tech tech="Next.js" />and work with<Tech tech="REST APIs" />.
+  </motion.p>
 
-<motion.p
-  variants={{
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  }}
-  transition={{ duration: 0.5, ease: "easeOut" }}
->
-I've built and deployed several projects, including a Next.js e-commerce website, a React task manager, and  a responsive business landing page developed as part of my front-end internship with AppRo8. I'm also  a full-stack UK travel application where I've developed REST API endpoints, integrated PostgreSQL, and connected backend data to the React frontend.
-</motion.p>
+  <motion.p
+    variants={{
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0 },
+    }}
+    transition={{ duration: 0.5, ease: "easeOut" }}
+  >
+   I've built and deployed several projects, including a Next.js e-commerce website, a React task manager, a responsive business landing page, and a weather app using a live API. I'm also developing a UK travel application with a React frontend and a backend built using<Tech tech="Node.js" />,<Tech tech="Express" />and<Tech tech="PostgreSQL" />.
+    I'm currently learning<Tech tech="TypeScript" />.
+  </motion.p>
 
-<motion.p
-  variants={{
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  }}
-  transition={{ duration: 0.5, ease: "easeOut" }}
->
-   With a background in architecture and <Tech tech="UI/UX" /> design
-  training, I enjoy combining development with a design-focused
-  approach. I care about usability, accessibility and creating
-  interfaces that are both technically solid and intuitive for users.
-</motion.p>
+  <motion.p
+    variants={{
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0 },
+    }}
+    transition={{ duration: 0.5, ease: "easeOut" }}
+  >
+ With a background in architecture,<Tech tech="UI/UX"/>design training, and professional<Tech tech="UI Development"/>experience, I bring a design-focused approach to frontend development. I enjoy turning ideas and requirements into clean, accessible, and intuitive user interfaces.
+  </motion.p>
 
-<motion.p
-  variants={{
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  }}
-  transition={{ duration: 0.5, ease: "easeOut" }}
->
-  I speak <Tech tech="English" />, <Tech tech="German" /> and{" "}
-  <Tech tech="Persian" />.
-</motion.p>
-              </motion.div>
+  <motion.p
+    variants={{
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0 },
+    }}
+    transition={{ duration: 0.5, ease: "easeOut" }}
+  >
+    I speak <Tech tech="English" />, <Tech tech="German" /> and{" "}
+    <Tech tech="Persian" />.
+  </motion.p>
+</motion.div>
+
 
               {/* Download CV */}
               <motion.div
@@ -159,7 +154,7 @@ I've built and deployed several projects, including a Next.js e-commerce website
                 className="mt-8"
               >
                 <a
-                  href="/Delaram_Farzad_Resume_2026-10-20 $$.pdf"
+                  href="/Delaram_Farzad_CV_2026-10-21 -$.pdf"
                   download
                   className="relative inline-flex items-center justify-center gap-2 py-3 px-7 overflow-hidden font-semibold tracking-wide text-white bg-sky-400 rounded-xl shadow-lg transition-all duration-300 ease-out hover:shadow-xl hover:scale-105 active:scale-95 group"
                 >
