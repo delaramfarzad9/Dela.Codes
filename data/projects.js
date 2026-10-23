@@ -22,7 +22,7 @@ const   projects= [
 
 {
   title: "VoyaVista — UK Travel Application",
-  img: "/images/projects/voyavista.png",
+  img: "/images/projects/voyavista_uk.png",
   status: "In Progress",
   description: `· React & Tailwind CSS — Building a responsive UK travel application with reusable components and a modern interface.
 · Full-stack development — Developing the frontend with React and the backend with Node.js and Express.
