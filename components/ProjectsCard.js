@@ -81,31 +81,52 @@ const ProjectsCard = ({ project, index }) => {
         </p>
 
         {/* Tech stack pills */}
-        <div className="flex flex-wrap gap-2">
-          {project.tech.map((t, i) => (
-            <span
-              key={i}
-              className="bg-pink-600/90 text-gray-100 px-3 py-1 text-xs font-bold rounded-lg shadow-sm hover:scale-105 active:scale-95 transition-transform duration-200 cursor-default select-none"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
+      
+{/* Tech stack pills */}
+<div className="flex flex-wrap gap-2">
+  {project.tech.map((t, i) => (
+    <span
+      key={i}
+      className="bg-pink-600/90 text-gray-100
+        px-3 py-1.5 md:px-4
+        text-xs md:text-sm font-bold
+        rounded-lg shadow-sm
+        hover:scale-105 active:scale-95
+        transition-transform duration-200
+        cursor-default select-none"
+    >
+      {t}
+    </span>
+  ))}
+</div>
+
 
         {/* Buttons */}
         <div className="flex flex-row flex-wrap gap-3 mt-1">
           {/* Live Demo */}
-          <motion.a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileTap={{ scale: 0.93 }}
-            className="relative inline-flex items-center gap-2 px-6 py-2.5 rounded-xl font-semibold overflow-hidden text-white bg-sky-500 shadow-md hover:scale-105 active:scale-95 transition-all duration-300 group"
-          >
-            <span className="absolute inset-0 bg-linear-to-r from-pink-600 to-orange-400 translate-x-full group-hover:translate-x-0 group-active:translate-x-0 transition-transform duration-500 ease-out" />
-            <Svg className="w-4 h-4 shrink-0" svgId="external-link" />
-            <span className="relative">Live Demo</span>
-          </motion.a>
+        
+{/* Live Demo */}
+{project.demo ? (
+  <motion.a
+    href={project.demo}
+    target="_blank"
+    rel="noopener noreferrer"
+    whileTap={{ scale: 0.93 }}
+    className="relative inline-flex items-center gap-2 px-6 py-2.5 rounded-xl font-semibold overflow-hidden text-white bg-sky-500 shadow-md hover:scale-105 active:scale-95 transition-all duration-300 group"
+  >
+    <span className="absolute inset-0 bg-linear-to-r from-pink-600 to-orange-400 translate-x-full group-hover:translate-x-0 group-active:translate-x-0 transition-transform duration-500 ease-out" />
+    <Svg className="w-4 h-4 shrink-0" svgId="external-link" />
+    <span className="relative">Live Demo</span>
+  </motion.a>
+) : (
+  <span
+    className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl font-semibold
+    bg-gray-200 text-gray-500 dark:bg-gray-700 dark:text-gray-400
+    cursor-not-allowed select-none"
+  >
+    Demo Coming Soon
+  </span>
+)}
 
           {/* Source Code */}
           <motion.a
