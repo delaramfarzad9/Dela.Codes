@@ -81,13 +81,39 @@ Framer Motion — Integrated subtle animations and transitions to create a poli
       demo: "https://delaramfarzad9.github.io/weather-app/",
       github: "https://github.com/delaramfarzad9/weather-app",
     },
-    // {
-    //   title: "Admin Dashboard",
-    //   img: "/images/projects/dashboard.png",
-    //   description: "A responsive admin dashboard built with React and Tailwind CSS, featuring interactive charts, data tables, and basic user management functionality. Designed with a clean layout and reusable components for a smooth and efficient user experience.",
-    //   tech: ["React", "Tailwind", "Chart.js"],
-    //   demo: "https://your-admin-demo.com",
-    //   github: "https://github.com/delaramfarzad9/admin-dashboard",
-    // },
+      {
+      title: "Admin Dashboard",
+      img: "/images/projects/dashboard.png",
+      description: "A responsive admin dashboard built with React and Tailwind CSS, featuring interactive charts, data tables, and basic user management functionality. Designed with a clean layout and reusable components for a smooth and efficient user experience.",
+      tech: ["React", "Tailwind", "Chart.js"],
+      demo: "",
+      github: "https://github.com/delaramfarzad9/admin-dashboard",
+    },
+    
+{
+  title: "SafeWeb — Cybersecurity SaaS Landing Page",
+  img: "/images/projects/safeweb.png",
+  status: "Completed",
+  description: `· HTML5 & CSS3 — Built a fully responsive cybersecurity SaaS landing page without JavaScript.
+· CSS Architecture — Created a reusable design token system using CSS custom properties and fluid typography with clamp().
+· Responsive Design — Used CSS Grid, Flexbox, and media queries to support desktop, tablet, and mobile layouts.
+· CSS-Only Navigation — Implemented an interactive mobile menu using the checkbox hack and :checked selector.
+· Accessibility — Applied semantic HTML, ARIA attributes, keyboard focus styles, and reduced-motion support.
+· Animations & Print Styling — Added CSS load-in animations, smooth scrolling, and a dedicated print stylesheet.
+· Performance & Testing — Achieved Lighthouse scores of 100 for Accessibility, Best Practices, and SEO, with Performance around 80. Optimised the hero image using WebP.`,
+  tech: [
+    "HTML5",
+    "CSS3",
+    "Responsive Design",
+    "CSS Grid",
+    "Flexbox",
+    "Accessibility",
+    "Lighthouse"
+  ],
+  demo: "https://safeweb-landing-page.vercel.app/",
+  github: "https://github.com/delaramfarzad9/safeweb-landing-page"
+},
+
+  
   ];
   export default projects;
