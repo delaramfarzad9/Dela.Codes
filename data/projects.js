@@ -94,13 +94,11 @@ Framer Motion — Integrated subtle animations and transitions to create a poli
   title: "SafeWeb — Cybersecurity SaaS Landing Page",
   img: "/images/projects/safeweb.png",
   status: "Completed",
-  description: `· HTML5 & CSS3 — Built a fully responsive cybersecurity SaaS landing page without JavaScript.
-· CSS Architecture — Created a reusable design token system using CSS custom properties and fluid typography with clamp().
-· Responsive Design — Used CSS Grid, Flexbox, and media queries to support desktop, tablet, and mobile layouts.
-· CSS-Only Navigation — Implemented an interactive mobile menu using the checkbox hack and :checked selector.
-· Accessibility — Applied semantic HTML, ARIA attributes, keyboard focus styles, and reduced-motion support.
-· Animations & Print Styling — Added CSS load-in animations, smooth scrolling, and a dedicated print stylesheet.
-· Performance & Testing — Achieved Lighthouse scores of 100 for Accessibility, Best Practices, and SEO, with Performance around 80. Optimised the hero image using WebP.`,
+  description: `· HTML5 & CSS3 — Built a responsive cybersecurity SaaS landing page without JavaScript.
+· CSS Architecture — Used design tokens, Grid, Flexbox, and fluid typography.
+· Mobile Navigation — Implemented a CSS-only menu using the checkbox hack.
+· Accessibility — Added semantic HTML, keyboard navigation, and reduced-motion support.
+· Performance — Optimised images with WebP and achieved 100 Lighthouse scores in Accessibility, Best Practices, and SEO.`,
   tech: [
     "HTML5",
     "CSS3",
