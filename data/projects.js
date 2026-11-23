@@ -58,7 +58,45 @@ Framer Motion — Integrated subtle animations and transitions to create a poli
       github: "https://github.com/delaramfarzad9/coffee-e-commerce",
     },
     {
-      title: "Task Manager App",
+  title: "React Developer Portfolio",
+  img: "/images/projects/reactportfolio.png",
+  description: `· React & Vite — Built a responsive multi-page portfolio using reusable components and React Router.
+· Interactive Projects — Implemented category filtering, project sliders, and dynamic UI interactions.
+· UI/UX — Designed responsive navigation, dark/light themes, and smooth animations using Motion.
+· Accessibility — Added keyboard navigation, focus management, and reduced-motion support.
+· Forms & Deployment — Built a validated contact form and deployed the application on Vercel.`,
+  tech: [
+    "React",
+    "Vite",
+    "JavaScript (ES6+)",
+    "Tailwind CSS",
+    "React Router",
+    "Motion"
+  ],
+  demo: "https://react-portfolio-seven-ruddy.vercel.app/",
+  github: "https://github.com/delaramfarzad9/react-portfolio"
+},
+    {
+  title: "TaskFlow — JavaScript Task Management App",
+  img: "/images/projects/taskflow.png",
+  description: `· Vanilla JavaScript — Built a responsive task management application using ES6+ modules without frameworks.
+· Task Management — Implemented CRUD operations, filtering, sorting, and drag-and-drop reordering.
+· Data Persistence — Used localStorage with schema migration and URL parameters to preserve user preferences.
+· Undo & Redo — Implemented the Command Pattern with a 20-action history stack.
+· Search & Accessibility — Added debounced search, highlighted matches, keyboard shortcuts, and accessible modals.`,
+  tech: [
+    "JavaScript (ES6+)",
+    "HTML5",
+    "CSS3",
+    "ES Modules",
+    "Drag & Drop API",
+    "LocalStorage"
+  ],
+  demo: "https://delaramfarzad9.github.io/JavaScript-Task-Management-Application/",
+  github: "https://github.com/delaramfarzad9/JavaScript-Task-Management-Application"
+},
+    {
+      title: "React Task Manager App",
       img: "/images/projects/taskmanager.png",
       description: `·  React & Vite — Created a responsive task management app with a clean, minimal UI.
 ·  CRUD features — Implemented adding, editing, completing, deleting, and marking tasks as important.
@@ -81,6 +119,7 @@ Framer Motion — Integrated subtle animations and transitions to create a poli
       demo: "https://delaramfarzad9.github.io/weather-app/",
       github: "https://github.com/delaramfarzad9/weather-app",
     },
+,
       {
       title: "Admin Dashboard",
       img: "/images/projects/dashboard.png",
